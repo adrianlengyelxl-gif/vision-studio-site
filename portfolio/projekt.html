@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- SEO meta tags filled dynamically by JS -->
+  <title>Projekt | Vision Studio Portfólió</title>
+  <meta name="description" content="">
+  <link rel="canonical" href="">
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:locale" content="hu_HU">
+  <meta property="og:site_name" content="Vision Studio Films Kft.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:image" content="">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Syne:wght@400;600;700;800&family=Space+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/mobile-fixes.css">
+  <!-- VideoObject Schema (filled by JS after load) -->
+  <script id="schema-video" type="application/ld+json">{}</script>
+  <script id="schema-breadcrumb" type="application/ld+json">{}</script>
+<style>/* TASK 10 */
+.metric-cell .m-n,.scale-item .si-n,.h-stat-n,.stat-n{letter-spacing:-.02em}
+.case-body h2{margin-top:72px!important}
+.blog-full-grid .blog-card{display:flex!important;flex-direction:column!important}
+.blog-full-grid .blog-body{display:flex!important;flex-direction:column!important;flex:1!important}
+.blog-full-grid .blog-meta{margin-top:auto!important}
+.featured-grid{align-items:stretch}
+.featured-card{height:100%}
+.inline-cta{border-color:rgba(200,168,90,.4)!important}
+.scale-item .si-n{font-size:clamp(30px,4vw,52px)!important}
+.kn{color:var(--c-gold);font-family:var(--ff-display);font-weight:400}
+.metrics-row{margin-top:40px}
+#blog-heading{font-size:clamp(38px,6vw,80px)!important}
+</style>
+</head>
+
+<a href="#main-content" class="skip-link">Ugrás a tartalomhoz</a>
+<body class="no-loader">
+
+<div id="vs-progress" aria-hidden="true"></div>
+<div id="noise" aria-hidden="true"></div>
+<div id="cinematic-grade" aria-hidden="true"></div>
+<div id="cur-dot" aria-hidden="true"></div>
+<div id="cur-ring" aria-hidden="true"></div>
+<div id="wipe" aria-hidden="true">
+  <div class="wipe-p"></div><div class="wipe-p"></div>
+  <div class="wipe-p"></div><div class="wipe-p"></div><div class="wipe-p"></div>
+</div>
+
+<!-- VIDEO MODAL -->
+<div id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title-txt">
+  <div class="modal-back"></div>
+  <div class="modal-box"><div class="modal-inner">
+    <div class="modal-head">
+      <div><div class="modal-project-tag">Vision Studio</div><h2 class="modal-title" id="modal-title-txt">Projekt</h2></div>
+      <button class="modal-x" aria-label="Bezárás"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M2 2L16 16M16 2L2 16" stroke="white" stroke-width="1.2" stroke-linecap="round"/></svg></button>
+    </div>
+    <div class="modal-video"><div class="modal-bar modal-bar--t"></div><div class="modal-bar modal-bar--b"></div>
+      <iframe id="modal-iframe" src="" allow="autoplay; fullscreen" allowfullscreen title="Vision Studio projekt" loading="lazy"></iframe>
+    </div>
+    <div class="modal-foot">
+      <div class="modal-stat"><div class="modal-stat-l">Ügyfél</div><div class="modal-stat-v">—</div></div>
+      <div class="modal-stat"><div class="modal-stat-l">Év</div><div class="modal-stat-v">—</div></div>
+      <div class="modal-stat"><div class="modal-stat-l">Hossz</div><div class="modal-stat-v">—</div></div>
+      <div class="modal-stat"><div class="modal-stat-l">Kategória</div><div class="modal-stat-v">—</div></div>
+    </div>
+  </div></div>
+</div>
+
+<!-- NAV -->
+<nav id="nav" role="navigation" aria-label="Főmenü">
+  <a href="/index.html" class="nav-logo nav-logo--img" aria-label="Vision Studio főoldal"><img src="../assets/logos/vs-logo-full.webp" alt="Vision Studio" class="nav-logo-img" width="160" height="32" loading="eager"></a>
+  <ul class="nav-menu" role="list">
+    <li><a href="/index.html">Főoldal</a></li>
+    <li><a href="/portfolio.html" class="active">Portfólió</a></li>
+    <li><a href="/szolgaltatasok/index.html">Szolgáltatások</a></li>
+    <li><a href="/iparagak/index.html">Iparágak</a></li>
+    <li><a href="/blog.html">Blog</a></li>
+    <li><a href="/faq.html">Árak &amp; GYIK</a></li>
+    <li><a href="/contact.html">Kapcsolat</a></li>
+  </ul>
+  <a href="/contact.html" class="nav-btn">Ajánlatkérés</a>
+  <button class="nav-burger" aria-label="Menü megnyitása" aria-expanded="false"><span></span><span></span><span></span></button>
+</nav>
+
+<main id="main-content">
+
+  <!-- BREADCRUMB -->
+  <nav id="breadcrumb" aria-label="Breadcrumb" style="padding:100px var(--gutter) 0;display:flex;gap:10px;align-items:center;font-family:var(--ff-mono);font-size:9px;letter-spacing:.28em;color:var(--c-grey3);text-transform:uppercase">
+    <a href="../index.html" style="color:var(--c-grey3);text-decoration:none;transition:color .2s" onmouseover="this.style.color='var(--c-gold)'" onmouseout="this.style.color='var(--c-grey3)'">Főoldal</a>
+    <span style="opacity:.4">/</span>
+    <a href="../portfolio.html" style="color:var(--c-grey3);text-decoration:none;transition:color .2s" onmouseover="this.style.color='var(--c-gold)'" onmouseout="this.style.color='var(--c-grey3)'">Portfólió</a>
+    <span style="opacity:.4">/</span>
+    <span id="bc-title" style="color:var(--c-gold)">—</span>
+  </nav>
+
+  <!-- HERO -->
+  <section class="cs-hero" aria-label="Projekt hero" style="margin-top:20px">
+    <div class="cs-hero-video" aria-hidden="true">
+      <iframe id="hero-iframe" src="" frameborder="0"
+        allow="autoplay; fullscreen" allowfullscreen loading="eager"
+        title="Vision Studio projekt hero"></iframe>
+    </div>
+    <div class="cs-hero-overlay" aria-hidden="true"></div>
+    <div style="position:absolute;top:clamp(32px,5vw,56px);left:var(--gutter);z-index:4;display:flex;align-items:center;gap:12px">
+      <div class="sec-label-bar" style="background:var(--c-gold)"></div>
+      <span id="hero-tag" style="font-family:var(--ff-mono);font-size:9px;letter-spacing:.42em;color:var(--c-gold);text-transform:uppercase"></span>
+      <div class="sec-label-bar" style="background:var(--c-gold)"></div>
+    </div>
+    <div class="cs-hero-body">
+      <div id="hero-client" class="cs-hero-client" data-reveal></div>
+      <h1 id="hero-title" class="cs-hero-title" data-reveal></h1>
+      <div id="hero-stats" class="cs-hero-meta" data-reveal></div>
+    </div>
+  </section>
+
+  <div class="glow-divider" style="--shimmer-delay:0.2s" aria-hidden="true"></div>
+
+  <section class="cs-body">
+
+    <!-- PROJECT OVERVIEW -->
+    <div class="cs-section cs-cols" data-reveal>
+      <div>
+        <div class="cs-section-label">A projekt</div>
+        <h2 class="cs-section-title">Cél &amp; <em>kontextus</em></h2>
+        <p id="proj-goal" class="cs-p"></p>
+        <p id="proj-concept" class="cs-p"></p>
+      </div>
+      <div>
+        <div id="proj-meta-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--c-grey1)"></div>
+      </div>
+    </div>
+
+    <div class="glow-divider rose" style="--shimmer-delay:0.8s;margin:0 calc(-1*var(--gutter))" aria-hidden="true"></div>
+
+    <!-- VIDEO EMBED -->
+    <div class="cs-video" data-reveal style="margin-top:clamp(56px,8vw,100px)">
+      <div class="cs-video-frame">
+        <div class="cs-video-bars" aria-hidden="true">
+          <div class="cs-video-bar cs-video-bar--t"></div>
+          <div class="cs-video-bar cs-video-bar--b"></div>
+        </div>
+        <iframe id="main-iframe" src="" allow="autoplay; fullscreen" allowfullscreen
+          loading="lazy" title="Vision Studio projekt videó"></iframe>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid var(--c-grey1)">
+        <span id="embed-label-l" style="font-family:var(--ff-mono);font-size:9px;letter-spacing:.28em;color:var(--c-gold)"></span>
+        <span id="embed-label-r" style="font-family:var(--ff-mono);font-size:9px;letter-spacing:.2em;color:var(--c-grey3)"></span>
+      </div>
+    </div>
+
+    <!-- PRODUCTION DETAILS -->
+    <div class="cs-section" style="margin-top:clamp(56px,8vw,100px)" data-reveal>
+      <div class="cs-section-label">Produkció</div>
+      <h2 class="cs-section-title">A <em>gyártásról</em></h2>
+      <div id="cs-phases" class="cs-phases"></div>
+    </div>
+
+    <div class="glow-divider" style="--shimmer-delay:1.2s;margin:0 calc(-1*var(--gutter))" aria-hidden="true"></div>
+
+    <!-- RESULTS -->
+    <div class="cs-section" style="margin-top:clamp(56px,8vw,100px)" data-reveal>
+      <div class="cs-section-label">Eredmények</div>
+      <h2 class="cs-section-title">Amit <em>elértünk</em></h2>
+      <div id="cs-results" class="cs-results"></div>
+    </div>
+
+    <!-- CASE STUDY LINK (only if case_study is set) -->
+    <div id="case-study-block" style="display:none;margin:clamp(40px,5vw,60px) 0;padding:28px;background:rgba(232,200,48,.06);border:1px solid rgba(232,200,48,.2);border-radius:2px" data-reveal>
+      <div style="font-family:var(--ff-mono);font-size:9px;letter-spacing:.3em;color:var(--c-gold);margin-bottom:14px">RÉSZLETES ESETTANULMÁNY</div>
+      <p style="font-size:14px;color:var(--c-mid);margin-bottom:20px;line-height:1.7">Ez a projekt teljes esettanulmányként is elérhető — részletes kampánystratégiával, kreatív koncepcióval és mért eredményekkel.</p>
+      <a id="case-study-link" href="#" class="btn-gold">
+        <span>Teljes case study megtekintése</span>
+        <svg width="14" height="10" viewBox="0 0 14 10" fill="none"><path d="M1 5H13M9 1L13 5L9 9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+      </a>
+    </div>
+
+    <!-- RELATED SERVICES -->
+    <div id="related-block" style="margin:clamp(40px,5vw,60px) 0;padding:24px;background:rgba(200,168,90,.05);border:1px solid rgba(200,168,90,.15);border-radius:2px" data-reveal>
+      <p style="font-size:13px;color:var(--c-mid);margin-bottom:12px;font-family:var(--ff-mono);letter-spacing:.08em">Kapcsolódó szolgáltatások:</p>
+      <div id="related-links" style="display:flex;gap:16px;flex-wrap:wrap"></div>
+    </div>
+
+    <!-- CTA -->
+    <div style="text-align:center;padding:clamp(56px,8vw,100px) 0 clamp(40px,5vw,60px)" data-reveal>
+      <div class="sec-label" style="justify-content:center;margin-bottom:20px">
+        <div class="sec-label-bar"></div>
+        <span class="sec-label-txt">Következő lépés</span>
+        <div class="sec-label-bar"></div>
+      </div>
+      <h2 style="font-family:var(--ff-display);font-size:clamp(28px,4vw,56px);font-weight:300;line-height:1.1;margin-bottom:20px">
+        Legyen a következő<br><em>sikertörténet az Öné.</em>
+      </h2>
+      <p style="font-size:15px;color:var(--c-mid);margin-bottom:40px;max-width:440px;margin-left:auto;margin-right:auto">
+        24 órán belül visszajelzünk. Nincs kötelezettség, csak egy jó beszélgetés.
+      </p>
+      <div style="display:flex;gap:18px;justify-content:center;flex-wrap:wrap">
+        <a href="../contact.html" class="btn-gold">
+          <span>Ingyenes konzultáció →</span>
+          <svg width="14" height="10" viewBox="0 0 14 10" fill="none"><path d="M1 5H13M9 1L13 5L9 9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+        </a>
+        <a href="../portfolio.html" class="btn-ghost">
+          <div class="play-circle" aria-hidden="true"><svg width="10" height="12" viewBox="0 0 10 12" fill="none"><path d="M1 1L9 6L1 11V1Z" fill="white"/></svg></div>
+          Összes projekt
+        </a>
+      </div>
+    </div>
+
+  </section>
+</main>
+
+<!-- FOOTER -->
+<footer role="contentinfo">
+  <div class="ft-main">
+    <div>
+      <a href="/index.html" class="nav-logo nav-logo--img" style="margin-bottom:20px" aria-label="Vision Studio főoldal"><img src="../assets/logos/vs-logo-full.webp" alt="Vision Studio" class="nav-logo-img nav-logo-img--ft" width="148" height="30" loading="lazy"></a>
+      <p class="ft-brand-desc">Prémium videóprodukciós stúdió Budapest szívéből. 1500+ elkészített videó, 12+ év tapasztalat, 30+ prémium márka.</p>
+    </div>
+    <div>
+      <div class="ft-col-h">Szolgáltatások</div>
+      <ul class="ft-links">
+        <li><a href="../szolgaltatasok/reklamfilm-keszites.html">Reklámfilm készítés</a></li>
+        <li><a href="../szolgaltatasok/ceges-video-keszites.html">Céges videó</a></li>
+        <li><a href="../szolgaltatasok/social-media-video.html">Social media videók</a></li>
+        <li><a href="../szolgaltatasok/dron-videozas.html">Drón videózás</a></li>
+        <li><a href="../szolgaltatasok/brand-film-keszites.html">Brand Film</a></li>
+        <li><a href="../szolgaltatasok/video-marketing.html">Videó Marketing</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="ft-col-h">Navigáció</div>
+      <ul class="ft-links">
+        <li><a href="../portfolio.html">Portfólió</a></li>
+        <li><a href="/szolgaltatasok/index.html">Szolgáltatások</a></li>
+        <li><a href="../about.html">Rólunk</a></li>
+        <li><a href="../blog.html">Blog</a></li>
+        <li><a href="../contact.html">Kapcsolat</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="ft-col-h">Kapcsolat</div>
+      <div class="ft-contact-item"><div class="ft-contact-l">Email</div><a href="mailto:hello@visionstudio.hu" class="ft-contact-v">hello@visionstudio.hu</a></div>
+      <div class="ft-contact-item"><div class="ft-contact-l">Telefon</div><a href="tel:+36303462267" class="ft-contact-v">+36 30 346 22 67</a></div>
+      <div class="ft-contact-item"><div class="ft-contact-l">Ügyvezető</div><span class="ft-contact-v">Lengyel Adrián</span></div>
+      <div class="ft-contact-item"><div class="ft-contact-l">Helyszín</div><span class="ft-contact-v">Budapest, Magyarország</span></div>
+    </div>
+  </div>
+  <div class="ft-bottom">
+    <span class="ft-copy">© 2026 Vision Studio Films Kft. — Minden jog fenntartva.</span>
+    <span class="ft-copy" style="color:var(--c-grey3)">visionstudio.hu</span>
+  </div>
+</footer>
+
+<!-- DATA + SCRIPTS -->
+<script src="../data/projects.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script defer src="../js/main.js"></script><script>
+/* ══════════════════════════════════════════════════════
+   DYNAMIC PORTFOLIO PAGE ENGINE
+   Reads ?id=project-slug from URL, finds the project in
+   PROJECTS array, and fills in all page content.
+   ══════════════════════════════════════════════════════ */
+(function() {
+  /* ── Get project ID from URL ─── */
+  var id = new URLSearchParams(window.location.search).get('id');
+
+  /* ── Find project in data ─── */
+  /* PROJECTS is loaded from ../data/projects.js before this script */
+  var p = null;
+  if (typeof PROJECTS !== 'undefined') {
+    for (var i = 0; i < PROJECTS.length; i++) {
+      if (PROJECTS[i].id === id) { p = PROJECTS[i]; break; }
+    }
+  }
+
+  /* ── 404 fallback ─── */
+  if (!p) {
+    document.title = 'Projekt nem található | Vision Studio';
+    var main = document.getElementById('main-content');
+    if (main) main.innerHTML =
+      '<div style="padding:160px var(--gutter) 80px;text-align:center">' +
+      '<p style="font-family:var(--ff-mono);font-size:10px;letter-spacing:.3em;color:var(--c-gold);margin-bottom:16px">404 · PROJEKT NEM TALÁLHATÓ</p>' +
+      '<h1 style="font-family:var(--ff-display);font-size:clamp(32px,5vw,56px);font-weight:300;margin-bottom:24px">Ez a projekt nem található.</h1>' +
+      '<a href="../portfolio.html" class="btn-gold"><span>Vissza a portfólióra</span></a></div>';
+    return;
+  }
+
+  /* ── Helpers ─── */
+  function esc(s) { return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+  function set(id, html, isText) {
+    var el = document.getElementById(id);
+    if (!el) return;
+    if (isText) el.textContent = html;
+    else el.innerHTML = html;
+  }
+  function vimeoId(v) {
+    var s = String(v||'').trim();
+    if (/^\d+$/.test(s)) return s;
+    var m = s.match(/vimeo\.com\/(?:video\/)?(\d+)/);
+    return m ? m[1] : s.replace(/\D/g,'');
+  }
+  var vid = vimeoId(p.vid);
+
+  /* ── Arrow SVG (reused) ─── */
+  var arrowSvg = '<svg width="10" height="8" viewBox="0 0 14 10" fill="none"><path d="M1 5H13M9 1L13 5L9 9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>';
+
+  /* ── PAGE TITLE + META ─── */
+  document.title = p.title + ' | Vision Studio Portfólió';
+  var canonicalUrl = 'https://visionstudio.hu/portfolio/projekt.html?id=' + p.id;
+  var thumbUrl     = vid ? ('https://vumbnail.com/' + vid + '.jpg') : '';
+  var desc         = esc(p.client) + ' — ' + esc(p.tag) + ' · ' + esc(p.year) + '. ' + esc(p.goal);
+
+  /* Set meta tags */
+  (function setMeta(name, content) {}); // placeholder
+  document.querySelector('meta[name="description"]').content       = desc;
+  document.querySelector('link[rel="canonical"]').href             = canonicalUrl;
+  document.querySelector('meta[property="og:title"]').content      = p.title + ' — Vision Studio';
+  document.querySelector('meta[property="og:description"]').content= desc;
+  document.querySelector('meta[property="og:url"]').content        = canonicalUrl;
+  if (thumbUrl) document.querySelector('meta[property="og:image"]').content = thumbUrl;
+  document.querySelector('meta[name="twitter:title"]').content     = p.title + ' — Vision Studio';
+  document.querySelector('meta[name="twitter:description"]').content= desc;
+  if (thumbUrl) document.querySelector('meta[name="twitter:image"]').content = thumbUrl;
+
+  /* ── SCHEMA JSON-LD ─── */
+  var schemaVideo = {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": p.title,
+    "description": desc,
+    "thumbnailUrl": thumbUrl,
+    "uploadDate": p.year + "-01-01",
+    "embedUrl": vid ? ('https://vimeo.com/' + vid) : '',
+    "publisher": {
+      "@type": "Organization",
+      "name": "Vision Studio Films Kft.",
+      "url": "https://visionstudio.hu"
+    }
+  };
+  var schemaBreadcrumb = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type":"ListItem","position":1,"name":"Vision Studio","item":"https://visionstudio.hu"},
+      {"@type":"ListItem","position":2,"name":"Portfólió","item":"https://visionstudio.hu/portfolio.html"},
+      {"@type":"ListItem","position":3,"name":p.title,"item":canonicalUrl}
+    ]
+  };
+  document.getElementById('schema-video').textContent      = JSON.stringify(schemaVideo, null, 2);
+  document.getElementById('schema-breadcrumb').textContent = JSON.stringify(schemaBreadcrumb, null, 2);
+
+  /* ── BREADCRUMB ─── */
+  set('bc-title', esc(p.client));
+
+  /* ── HERO ─── */
+  if (vid) {
+    document.getElementById('hero-iframe').src =
+      'https://player.vimeo.com/video/' + vid +
+      '?background=1&autoplay=1&muted=1&loop=1&title=0&byline=0&portrait=0';
+    document.getElementById('hero-iframe').title = esc(p.title) + ' — Vision Studio';
+  }
+  set('hero-tag', esc(p.tag));
+  set('hero-client', esc(p.client) + ' · ' + esc(p.year));
+
+  /* Hero title: split on " — " for line break with <em> */
+  var titleParts = p.title.split(' — ');
+  if (titleParts.length > 1) {
+    set('hero-title', esc(titleParts[0]) + '<br><em>' + esc(titleParts.slice(1).join(' — ')) + '</em>');
+  } else {
+    set('hero-title', esc(p.title));
+  }
+
+  /* Hero stats */
+  var statsHtml = '';
+  (p.results || []).forEach(function(r) {
+    statsHtml += '<div class="cs-hero-stat"><div class="cs-hero-stat-n">' + esc(r.n) +
+      '</div><div class="cs-hero-stat-l">' + esc(r.l) + '</div></div>';
+  });
+  set('hero-stats', statsHtml);
+
+  /* ── PROJECT OVERVIEW ─── */
+  set('proj-goal',    esc(p.goal));
+  set('proj-concept', esc(p.concept));
+
+  var metaGrid = '';
+  function metaCell(label, value) {
+    return '<div style="background:var(--c-dark2);padding:18px 20px">' +
+      '<div class="cs-section-label" style="margin-bottom:6px;font-size:8px">' + esc(label) + '</div>' +
+      '<div style="font-family:var(--ff-display);font-size:15px">' + esc(value) + '</div></div>';
+  }
+  metaGrid += metaCell('Ügyfél',     p.client);
+  metaGrid += metaCell('Kategória',  p.tag);
+  metaGrid += metaCell('Év',         p.year);
+  metaGrid += metaCell('Hossz',      p.dur);
+  set('proj-meta-grid', metaGrid);
+
+  /* ── MAIN VIDEO EMBED ─── */
+  if (vid) {
+    document.getElementById('main-iframe').src =
+      'https://player.vimeo.com/video/' + vid + '?color=c8a85a&title=0&byline=0&portrait=0';
+    document.getElementById('main-iframe').title = esc(p.title) + ' — Vision Studio';
+  }
+  set('embed-label-l', 'VISION STUDIO · ' + esc(p.year));
+  set('embed-label-r', esc(p.dur) + ' · 16:9 + 9:16');
+
+  /* ── PRODUCTION PHASES ─── */
+  var phases = p.phases || [
+    {title:'Előkészítés', desc:''},
+    {title:'Forgatás',    desc:''},
+    {title:'Utómunka',    desc:''}
+  ];
+  var phasesHtml = '';
+  phases.forEach(function(ph, i) {
+    phasesHtml += '<div class="cs-phase">' +
+      '<div class="cs-phase-n">0' + (i+1) + ' — ' + ['PRE-PRODUCTION','PRODUCTION','POST-PRODUCTION'][i] + '</div>' +
+      '<div class="cs-phase-t">' + esc(ph.title) + '</div>' +
+      '<p class="cs-phase-d">' + esc(ph.desc) + '</p></div>';
+  });
+  set('cs-phases', phasesHtml);
+
+  /* ── RESULTS ─── */
+  var resultsHtml = '';
+  (p.results || []).forEach(function(r) {
+    resultsHtml += '<div class="cs-result"><div class="cs-result-n">' + esc(r.n) +
+      '</div><div class="cs-result-l">' + esc(r.l) + '</div></div>';
+  });
+  set('cs-results', resultsHtml);
+
+  /* ── CASE STUDY LINK ─── */
+  if (p.case_study && p.case_study.trim()) {
+    var csBlock = document.getElementById('case-study-block');
+    var csLink  = document.getElementById('case-study-link');
+    if (csBlock) csBlock.style.display = 'block';
+    if (csLink)  csLink.href = p.case_study;
+  }
+
+  /* ── RELATED SERVICES ─── */
+  var relLinksHtml = '';
+  (p.services || []).forEach(function(s) {
+    relLinksHtml +=
+      '<a href="' + esc(s.url) + '" style="color:var(--c-gold);font-size:13px;text-decoration:none;display:flex;align-items:center;gap:6px">' +
+      esc(s.name) + ' ' + arrowSvg + '</a>';
+  });
+  if (relLinksHtml) set('related-links', relLinksHtml);
+  else {
+    var rb = document.getElementById('related-block');
+    if (rb) rb.style.display = 'none';
+  }
+
+}());
+</script>
+
+<script defer src="../js/performance.js"></script>
+</body>
+</html>
