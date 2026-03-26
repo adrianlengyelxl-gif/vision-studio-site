@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 – Az oldal nem található | Vision Studio Budapest</title>
+  <meta name="description" content="A keresett oldal nem található. Látogasson el a Vision Studio főoldalára, vagy tekintse meg portfóliónkat.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="canonical" href="https://visionstudio.hu/404.html">
+  <meta property="og:title" content="404 — Vision Studio Films Kft.">
+  <meta property="og:description" content="A keresett oldal nem található.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://visionstudio.hu/404">
+  <meta property="og:locale" content="hu_HU">
+  <meta property="og:image" content="https://visionstudio.hu/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="Vision Studio Films Kft.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="404 — Vision Studio Films Kft.">
+  <meta name="twitter:image" content="https://visionstudio.hu/assets/og-image.png">
+  <meta name="theme-color" content="#030303">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Syne:wght@400;600;700;800&family=Space+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/mobile-fixes.css">
+  <style>
+    .err-wrap {
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: clamp(80px, 10vw, 140px) var(--gutter) clamp(60px, 8vw, 100px);
+      position: relative;
+      overflow: hidden;
+    }
+    .err-num {
+      font-family: var(--ff-display);
+      font-size: clamp(120px, 20vw, 260px);
+      font-weight: 300;
+      line-height: 1;
+      color: transparent;
+      -webkit-text-stroke: 1px rgba(200,168,90,.25);
+      letter-spacing: -.04em;
+      user-select: none;
+      pointer-events: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      white-space: nowrap;
+    }
+    .err-content {
+      position: relative;
+      z-index: 2;
+    }
+    .err-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--ff-mono);
+      font-size: 10px;
+      letter-spacing: .3em;
+      color: var(--c-gold);
+      text-transform: uppercase;
+      margin-bottom: 28px;
+    }
+    .err-label::before {
+      content: '';
+      display: block;
+      width: 24px;
+      height: 1px;
+      background: var(--c-gold);
+    }
+    .err-title {
+      font-family: var(--ff-display);
+      font-size: clamp(36px, 5vw, 72px);
+      font-weight: 300;
+      line-height: 1.1;
+      color: var(--c-white);
+      margin-bottom: 20px;
+    }
+    .err-title em {
+      font-style: italic;
+      color: var(--c-gold);
+    }
+    .err-sub {
+      font-size: clamp(14px, 1.6vw, 17px);
+      color: var(--c-mid);
+      line-height: 1.7;
+      max-width: 480px;
+      margin: 0 auto 44px;
+    }
+    .err-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      justify-content: center;
+    }
+    .err-btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      border: 1px solid rgba(200,168,90,.35);
+      color: var(--c-mid);
+      font-family: var(--ff-mono);
+      font-size: 11px;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: border-color .3s, color .3s;
+    }
+    .err-btn-ghost:hover {
+      border-color: var(--c-gold);
+      color: var(--c-white);
+    }
+    .err-links {
+      margin-top: 60px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 24px;
+      justify-content: center;
+    }
+    .err-links a {
+      font-family: var(--ff-mono);
+      font-size: 10px;
+      letter-spacing: .15em;
+      color: var(--c-mid);
+      text-decoration: none;
+      text-transform: uppercase;
+      border-bottom: 1px solid transparent;
+      padding-bottom: 2px;
+      transition: color .3s, border-color .3s;
+    }
+    .err-links a:hover {
+      color: var(--c-gold);
+      border-color: rgba(200,168,90,.4);
+    }
+  </style>
+</head>
+<a href="#main-content" class="skip-link">Ugrás a tartalomhoz</a>
+<body class="no-loader">
+
+<div id="vs-progress" aria-hidden="true"></div>
+<div id="noise" aria-hidden="true"></div>
+<div id="cur-dot" aria-hidden="true"></div>
+<div id="cur-ring" aria-hidden="true"></div>
+<div id="wipe" aria-hidden="true">
+  <div class="wipe-p"></div><div class="wipe-p"></div>
+  <div class="wipe-p"></div><div class="wipe-p"></div><div class="wipe-p"></div>
+</div>
+
+<nav id="nav" role="navigation" aria-label="Főmenü">
+  <a href="index.html" class="nav-logo nav-logo--img" aria-label="Vision Studio főoldal"><img src="assets/logos/vs-logo-full.webp" alt="Vision Studio" class="nav-logo-img" width="160" height="32" loading="eager"></a>
+  <ul class="nav-menu" role="list">
+    <li><a href="index.html">Főoldal</a></li>
+    <li><a href="szolgaltatasok/index.html">Szolgáltatások</a></li>
+    <li><a href="iparagak/index.html">Iparágak</a></li>
+    <li><a href="portfolio.html">Portfólió</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="faq.html">Árak &amp; GYIK</a></li>
+    <li><a href="contact.html">Kapcsolat</a></li>
+  </ul>
+  <a href="contact.html" class="nav-btn">Ajánlatkérés</a>
+  <button class="nav-burger" aria-label="Menü megnyitása" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<main id="main-content">
+  <div class="err-wrap">
+    <div class="err-num" aria-hidden="true">404</div>
+    <div class="err-content">
+      <div class="err-label">Oldal nem található</div>
+      <h1 class="err-title">
+        Ez az oldal<br><em>nem létezik.</em>
+      </h1>
+      <p class="err-sub">
+        A keresett tartalom áthelyezésre vagy törlésre kerülhetett. Navigáljon vissza a főoldalra, vagy nézze meg portfóliónkat.
+      </p>
+      <div class="err-actions">
+        <a href="index.html" class="btn-gold">
+          <span>Vissza a főoldalra</span>
+          <svg width="14" height="10" viewBox="0 0 14 10" fill="none" aria-hidden="true">
+            <path d="M1 5H13M9 1L13 5L9 9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+          </svg>
+        </a>
+        <a href="portfolio.html" class="err-btn-ghost">Portfólió megtekintése</a>
+      </div>
+      <nav class="err-links" aria-label="Gyorslinkek">
+        <a href="szolgaltatasok/reklamfilm-keszites.html">Reklámfilm</a>
+        <a href="szolgaltatasok/ceges-video-keszites.html">Céges videó</a>
+        <a href="szolgaltatasok/brand-film-keszites.html">Brand film</a>
+        <a href="iparagak/hotel-video-keszites.html">Hotel videó</a>
+        <a href="iparagak/etterem-video-keszites.html">Étterem videó</a>
+        <a href="blog.html">Blog</a>
+        <a href="faq.html">Árak &amp; GYIK</a>
+        <a href="contact.html">Kapcsolat</a>
+      </nav>
+    </div>
+  </div>
+</main>
+
+<footer role="contentinfo">
+  <div class="ft-main">
+    <div><a href="index.html" class="nav-logo nav-logo--img" style="margin-bottom:16px"><img src="assets/logos/vs-logo-full.webp" alt="Vision Studio" class="nav-logo-img" width="160" height="32" loading="eager"></a><p class="ft-brand-desc">Prémium videóprodukciós stúdió Budapest szívéből. 1500+ elkészített videó, 12+ év tapasztalat, 30+ prémium márka.</p></div>
+    <div><div class="ft-col-h">Szolgáltatások</div><ul class="ft-links"><li><a href="szolgaltatasok/reklamfilm-keszites.html">Reklámfilm készítés</a></li><li><a href="szolgaltatasok/ceges-video-keszites.html">Céges videó</a></li><li><a href="szolgaltatasok/social-media-video.html">Social media videók</a></li><li><a href="szolgaltatasok/dron-videozas.html">Drón videózás</a></li><li><a href="szolgaltatasok/brand-film-keszites.html">Brand film</a></li><li><a href="szolgaltatasok/video-marketing.html">Videó marketing</a></li></ul></div>
+    <div><div class="ft-col-h">Iparágak</div><ul class="ft-links"><li><a href="iparagak/hotel-video-keszites.html">Hotel Video</a></li><li><a href="iparagak/etterem-video-keszites.html">Étterem</a></li><li><a href="iparagak/b2b-video.html">Céges</a></li><li><a href="iparagak/ingatlan-video-keszites.html">Ingatlan</a></li><li><a href="iparagak/videoklip-keszites.html">Videoklip</a></li><li><a href="iparagak/rendezveny-video-keszites.html">Rendezvény</a></li></ul></div>
+    <div><div class="ft-col-h">Kapcsolat</div><div class="ft-contact-item"><div class="ft-contact-l">Email</div><a href="mailto:hello@visionstudio.hu" class="ft-contact-v">hello@visionstudio.hu</a></div><div class="ft-contact-item"><div class="ft-contact-l">Telefon</div><a href="tel:+36303462267" class="ft-contact-v">+36 30 346 22 67</a></div><div class="ft-contact-item"><div class="ft-contact-l">Helyszín</div><span class="ft-contact-v">Budapest, Magyarország</span></div></div>
+  </div>
+  <div class="ft-bottom">
+    <span class="ft-copy">© 2026 Vision Studio Films Kft. — Minden jog fenntartva.</span>
+    <a href="contact.html" class="ft-copy" style="color:var(--c-gold)">Projekt megbeszélése →</a>
+  </div>
+</footer>
+
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script defer src="js/main.js"></script>
+<script defer src="js/performance.js"></script>
+</body>
+</html>

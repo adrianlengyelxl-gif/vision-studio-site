@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Rólunk | Vision Studio — Lengyel Adrián & A Csapat</title>
+<meta name="description" content="Vision Studio: prémium videóprodukciós stúdió Budapest. Lengyel Adrián vezette kreatív csapat, 2014 óta. 200+ projekt, 30+ prémium márka.">
+<link rel="preconnect" href="https://player.vimeo.com" crossorigin>
+  <link rel="dns-prefetch" href="https://f.vimeocdn.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Syne:wght@400;600;700;800&family=Space+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/mobile-fixes.css">
+    <meta property="og:title" content="Rólunk — Vision Studio Films Kft.">
+  <meta property="og:description" content="A Vision Studio csapata és küldetése. Prémium videóprodukcós stúdió Budapesten.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://visionstudio.hu/about">
+  <meta property="og:locale" content="hu_HU">
+<meta property="og:image" content="https://visionstudio.hu/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Vision Studio — Prémium Videóprodukció Budapest">
+<meta property="og:site_name" content="Vision Studio Films Kft.">
+<meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Rólunk — Vision Studio Films Kft.">
+  <meta name="twitter:description" content="A Vision Studio csapata és küldetése. Prémium videóprodukcós stúdió Budapesten.">
+  <meta name="twitter:image" content="https://visionstudio.hu/assets/og-image.png">
+  <link rel="canonical" href="https://visionstudio.hu/about">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"AboutPage","name":"Vision Studio — A Stúdióról","url":"https://visionstudio.hu/about.html","description":"Vision Studio prémium videóprodukciós stúdió Budapest — a csapatunkról, értékeinkről és megközelítésünkről."}
+  </script><style>/* TASK 10 */
+.metric-cell .m-n,.scale-item .si-n,.h-stat-n,.stat-n{letter-spacing:-.02em}
+.case-body h2{margin-top:72px!important}
+.blog-full-grid .blog-card{display:flex!important;flex-direction:column!important}
+.blog-full-grid .blog-body{display:flex!important;flex-direction:column!important;flex:1!important}
+.blog-full-grid .blog-meta{margin-top:auto!important}
+.featured-grid{align-items:stretch}
+.featured-card{height:100%}
+.inline-cta{border-color:rgba(200,168,90,.4)!important}
+.scale-item .si-n{font-size:clamp(30px,4vw,52px)!important}
+.kn{color:var(--c-gold);font-family:var(--ff-display);font-weight:400}
+.metrics-row{margin-top:40px}
+#blog-heading{font-size:clamp(38px,6vw,80px)!important}
+
+/* ── ABOUT PAGE UPGRADE ── */
+
+/* Stats: consistent layout */
+.stat-cell { text-align:center; }
+.stat-n { color:var(--c-gold) !important; }
+.stat-l { font-family:var(--ff-mono); font-size:9px; letter-spacing:.3em; text-transform:uppercase; color:var(--c-grey3); margin-top:8px; line-height:1.5; }
+
+/* Value boxes: cinematic upgrade */
+.value-box {
+  position: relative;
+  overflow: hidden;
+  transition: transform .35s cubic-bezier(.25,.46,.45,.94), background .35s ease;
+  cursor: default;
+  padding: 32px 28px 28px !important;
+}
+.value-box::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2px;
+  height: 0;
+  background: linear-gradient(to bottom, var(--c-gold), rgba(200,168,90,.3));
+  transition: height .4s cubic-bezier(.25,.46,.45,.94);
+}
+.value-box:hover { transform: translateY(-3px) scale(1.015); background: rgba(200,168,90,.03) !important; }
+.value-box:hover::before { height: 100%; }
+
+/* Ghost number */
+.value-n {
+  font-family: var(--ff-display) !important;
+  font-size: clamp(52px, 7vw, 80px) !important;
+  font-weight: 300 !important;
+  line-height: 1 !important;
+  letter-spacing: -.03em !important;
+  color: rgba(200,168,90,.1) !important;
+  margin-bottom: 20px !important;
+  transition: color .35s ease !important;
+  display: block !important;
+}
+.value-box:hover .value-n { color: rgba(200,168,90,.22) !important; }
+
+/* Value title */
+.value-t {
+  font-family: var(--ff-display) !important;
+  font-size: clamp(17px, 2vw, 22px) !important;
+  font-weight: 300 !important;
+  color: var(--c-white) !important;
+  letter-spacing: .01em !important;
+  margin-bottom: 12px !important;
+  line-height: 1.25 !important;
+}
+
+/* Value description */
+.value-d {
+  font-size: 14px !important;
+  line-height: 1.9 !important;
+  color: var(--c-mid) !important;
+  letter-spacing: .01em !important;
+}
+
+/* Staggered scroll-reveal via CSS animation */
+@keyframes vs-fade-up {
+  from { opacity:0; transform:translateY(24px); }
+  to   { opacity:1; transform:translateY(0); }
+}
+.value-box { animation: vs-fade-up .7s ease both; }
+.value-box:nth-child(1) { animation-delay: .05s; }
+.value-box:nth-child(2) { animation-delay: .15s; }
+.value-box:nth-child(3) { animation-delay: .25s; }
+.value-box:nth-child(4) { animation-delay: .35s; }
+
+/* Section title gold gradient */
+.about-values-title em {
+  background: linear-gradient(135deg, #c8a85a 0%, #f0d898 45%, #c8a85a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* About body text */
+.about-body {
+  line-height: 1.9 !important;
+  letter-spacing: .01em !important;
+  color: var(--c-mid) !important;
+}
+
+/* Email btn hover */
+.about-email {
+  transition: opacity .2s, color .2s !important;
+}
+.about-email:hover {
+  opacity: .75 !important;
+}
+</style>
+</head>
+<a href="#main-content" class="skip-link">Ugrás a tartalomhoz</a>
+<body class="no-loader">
+<div id="vs-progress" aria-hidden="true"></div>
+<div id="noise" aria-hidden="true"></div><div id="cur-dot" aria-hidden="true"></div><div id="cur-ring" aria-hidden="true"></div>
+<div id="wipe" aria-hidden="true"><div class="wipe-p"></div><div class="wipe-p"></div><div class="wipe-p"></div><div class="wipe-p"></div><div class="wipe-p"></div></div>
+<nav id="nav">
+  <a href="index.html" class="nav-logo nav-logo--img"><img src="assets/logos/vs-logo-full.webp" alt="Vision Studio" class="nav-logo-img" width="160" height="32" loading="eager"></a>
+          <ul class="nav-menu" role="list">
+    <li><a href="index.html">Főoldal</a></li>
+    <li><a href="szolgaltatasok/index.html">Szolgáltatások</a></li>
+    <li><a href="iparagak/index.html">Iparágak</a></li>
+    <li><a href="portfolio.html">Portfólió</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="faq.html">Árak &amp; GYIK</a></li>
+    <li><a href="contact.html">Kapcsolat</a></li>
+  </ul>
+  <a href="contact.html" class="nav-btn">Ajánlatkérés</a>
+  <button class="nav-burger" aria-label="Menü megnyitása" aria-expanded="false"><span></span><span></span><span></span></button>
+</nav>
+<main id="main-content">
+<section style="padding:calc(var(--nav-h)+80px) var(--gutter) var(--section-y);background:var(--c-dark2);position:relative;overflow:hidden">
+  <div aria-hidden="true" style="position:absolute;right:-60px;top:50%;transform:translateY(-50%);font-family:var(--ff-display);font-size:clamp(100px,16vw,200px);font-weight:300;color:transparent;-webkit-text-stroke:1px rgba(200,168,90,.04);pointer-events:none;white-space:nowrap">ABOUT</div>
+  <div class="sec-label" data-reveal><div class="sec-label-bar"></div><span class="sec-label-txt">A Stúdióról</span></div>
+  <h1 style="font-family:var(--ff-display);font-size:clamp(44px,7vw,100px);font-weight:300;line-height:1;max-width:800px;margin-bottom:32px" data-reveal>
+    Nem csak filmet<br><em style="color:var(--c-gold)">készítünk.</em>
+  </h1>
+  <p style="font-size:clamp(15px,1.5vw,18px);color:var(--c-mid);max-width:560px;line-height:1.9;letter-spacing:.01em" data-reveal>
+    A Vision Studio 2014-ben alakult azzal a küldetéssel, hogy a prémium videóprodukcióhoz ne kelljen multinacionális ügynökséghez fordulni. Azóta 1500+ videót és 200+ produkciót valósítottunk meg — személyes figyelemmel, kompromisszum nélkül.
+  </p>
+</section>
+
+<section class="sec" style="background:var(--c-black)">
+  <div class="about-grid">
+    <div>
+      <div class="sec-label" data-reveal><div class="sec-label-bar"></div><span class="sec-label-txt">Ügyvezető</span></div>
+      <h2 class="sec-title" data-reveal style="margin-bottom:20px">Lengyel<br><em>Adrián</em></h2>
+      <blockquote class="about-quote" data-reveal>
+        Egy jó videó nem azért emlékezetes, mert szép. Azért emlékezetes, mert igaz.
+      </blockquote>
+      <p class="about-body" data-reveal>Lengyel Adrián rendező-ügyvezetőként vezeti a Vision Studio minden projektjét. Reklámfilmezési pályafutása 2012-ben indult, a Vision Studio alapítása 2014-ben. Azóta 1500+ elkészített videó, 200+ produkció, köztük TV spotok, hotel brand filmek, gastro dokumentumfilmek és vállalati tartalmak.</p>
+      <p class="about-body" data-reveal>Személyes meggyőződése: minden projektnek van egy képkockája, amelytől a néző megáll. A feladat az, hogy megtaláljuk azt a képkockát — és arra építsük az egész filmet.</p>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:32px" data-reveal>
+        <a href="contact.html" class="btn-gold"><span>Kapcsolatfelvétel</span><svg width="14" height="10" viewBox="0 0 14 10" fill="none"><path d="M1 5H13M9 1L13 5L9 9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg></a>
+        <a href="mailto:hello@visionstudio.hu" class="btn-ghost about-email">hello@visionstudio.hu</a>
+      </div>
+    </div>
+    <div class="about-visual" data-reveal="left" style="aspect-ratio:2/3">
+      <img src="assets/images/lengyel-adrian.webp" alt="Lengyel Adrián – Vision Studio ügyvezető" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;" loading="lazy">
+      <div style="position:absolute;bottom:0;left:0;right:0;padding:64px 28px 26px 28px;background:linear-gradient(to top,rgba(0,0,0,.82) 0%,rgba(0,0,0,.4) 55%,transparent 100%);z-index:2;pointer-events:none">
+        <div style="width:28px;height:1px;background:var(--c-gold);opacity:.7;margin-bottom:10px"></div>
+        <div style="font-family:var(--ff-mono);font-size:10px;letter-spacing:.32em;text-transform:uppercase;color:var(--c-gold);margin-bottom:4px">Director &amp; Producer</div>
+        <div style="font-family:var(--ff-mono);font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.5)">Vision Studio</div>
+      </div>
+      <div class="about-frame"></div>
+      <div class="about-accent"></div>
+    </div>
+  </div>
+</section>
+
+<section aria-label="Statisztikák" style="background:var(--c-dark);padding:var(--section-y) var(--gutter)">
+  <div class="stats-row">
+    <div class="stat-cell"><div class="stat-n" data-counter data-target="1500" data-suffix="+">1500+</div><div class="stat-l">Elkészített videó</div></div>
+    <div class="stat-divider" aria-hidden="true"></div>
+    <div class="stat-cell"><div class="stat-n" data-counter data-target="12" data-suffix="+">12+</div><div class="stat-l">Év tapasztalat</div></div>
+    <div class="stat-divider" aria-hidden="true"></div>
+    <div class="stat-cell"><div class="stat-n" data-counter data-target="30" data-suffix="+">30+</div><div class="stat-l">Prémium márka</div></div>
+    <div class="stat-divider" aria-hidden="true"></div>
+    <div class="stat-cell"><div class="stat-n" data-counter data-target="98" data-suffix="%">98%</div><div class="stat-l">Visszatérő ügyfél</div></div>
+  </div>
+</section>
+
+<section class="sec" style="background:var(--c-dark2)">
+  <div class="sec-label" data-reveal><div class="sec-label-bar"></div><span class="sec-label-txt">Értékeink</span></div>
+  <h2 class="sec-title about-values-title" data-reveal>Amiben<br><em>hiszünk</em></h2>
+  <div class="value-grid">
+    <div class="value-box" data-reveal><div class="value-n">01</div><div class="value-t">Storytelling mindenekelőtt</div><div class="value-d">Minden döntésünk — kameraállás, vágás, zene — a story szolgálatában áll. A technika eszköz, nem cél.</div></div>
+    <div class="value-box" data-reveal data-delay="100"><div class="value-n">02</div><div class="value-t">Eredmény-fókusz</div><div class="value-d">Nem díjakat gyűjtünk — megtérülést hozunk. Minden projektnél meghatározzuk a sikermetrikát és mérjük az eredményt.</div></div>
+    <div class="value-box" data-reveal data-delay="150"><div class="value-n">03</div><div class="value-t">Személyes figyelem</div><div class="value-d">Nem vagyunk nagy ügynökség. Ez szándékos — minden ügyfelünknek senior figyelmet adunk, nem junior account managert.</div></div>
+    <div class="value-box" data-reveal data-delay="200"><div class="value-n">04</div><div class="value-t">Határidőtartás</div><div class="value-d">Ha megígértük, tartjuk. Ez egyszerűnek hangzik — de a kreatív iparban ritkán az. Nálunk nem kivétel, hanem alap.</div></div>
+  </div>
+</section>
+
+<section class="sec cta-band" style="background:var(--c-black)">
+  <div class="cta-bg-word">VISION</div>
+  <h2 class="cta-title" data-reveal>Dolgozzunk<br><em>együtt.</em></h2>
+  <p class="cta-sub" data-reveal>24 órán belül visszajelzünk. Nincs kötelezettség.</p>
+  <div class="cta-btns" data-reveal>
+    <a href="contact.html" class="btn-gold"><span>Projekt megbeszélése →</span><svg width="14" height="10" viewBox="0 0 14 10" fill="none"><path d="M1 5H13M9 1L13 5L9 9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg></a>
+    <a href="tel:+36303462267" class="btn-ghost"><div class="play-circle"><svg width="10" height="12" viewBox="0 0 10 12" fill="none"><path d="M1 1L9 6L1 11V1Z" fill="white"/></svg></div>+36 30 346 22 67</a>
+  </div>
+</section>
+</main>
+<footer role="contentinfo"><div class="ft-main"><div><a href="index.html" class="nav-logo nav-logo--img" style="margin-bottom:16px"><img src="assets/logos/vs-logo-full.webp" alt="Vision Studio" class="nav-logo-img" width="160" height="32" loading="eager"></a><p class="ft-brand-desc">Prémium videóprodukciós stúdió Budapest szívéből. 1500+ elkészített videó, 12+ év tapasztalat, 30+ prémium márka.</p></div><div><div class="ft-col-h">Szolgáltatások</div><ul class="ft-links"><li><a href="szolgaltatasok/reklamfilm-keszites.html">Reklámfilm készítés</a></li><li><a href="szolgaltatasok/ceges-video-keszites.html">Céges videó</a></li><li><a href="szolgaltatasok/social-media-video.html">Social media videók</a></li><li><a href="szolgaltatasok/dron-videozas.html">Drón videózás</a></li><li><a href="szolgaltatasok/brand-film-keszites.html">Brand film</a></li><li><a href="szolgaltatasok/video-marketing.html">Videó marketing</a></li></ul></div><div><div class="ft-col-h">Iparágak</div><ul class="ft-links"><li><a href="iparagak/hotel-video-keszites.html">Hotel Video</a></li><li><a href="iparagak/etterem-video-keszites.html">Étterem</a></li><li><a href="iparagak/b2b-video.html">Céges</a></li><li><a href="iparagak/ingatlan-video-keszites.html">Ingatlan</a></li><li><a href="iparagak/videoklip-keszites.html">Videoklip</a></li><li><a href="iparagak/rendezveny-video-keszites.html">Rendezvény</a></li></ul></div><div><div class="ft-col-h">Kapcsolat</div><div class="ft-contact-item"><div class="ft-contact-l">Email</div><a href="mailto:hello@visionstudio.hu" class="ft-contact-v">hello@visionstudio.hu</a></div><div class="ft-contact-item"><div class="ft-contact-l">Telefon</div><a href="tel:+36303462267" class="ft-contact-v">+36 30 346 22 67</a></div><div class="ft-contact-item"><div class="ft-contact-l">Helyszín</div><span class="ft-contact-v">Budapest, Magyarország</span></div></div></div><div class="ft-bottom"><span class="ft-copy">© 2026 Vision Studio Films Kft. — Minden jog fenntartva.</span><a href="contact.html" class="ft-copy" style="color:var(--c-gold)">Projekt megbeszélése →</a></div></footer>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script defer src="data/projects.js"></script>
+<script defer src="js/main.js"></script><script defer src="js/performance.js"></script>
+</body></html>

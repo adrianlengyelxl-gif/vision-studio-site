@@ -1,0 +1,13 @@
+{
+  "name": "Vision Studio Films Kft.",
+  "short_name": "Vision Studio",
+  "description": "Prémium videóprodukciós stúdió Budapest — Reklámfilm, brand videó, hotel marketing",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#030303",
+  "theme_color": "#030303",
+  "icons": [
+    { "src": "/assets/icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/assets/icons/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
