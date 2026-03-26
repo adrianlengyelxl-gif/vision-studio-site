@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Iparágak | Videóprodukció Minden Szektornak | Vision Studio Budapest</title>
+<meta name="description" content="Prémium videóprodukció minden iparágban: hotel, étterem, B2B céges, ingatlan és videoklip készítés. Budapest, 200+ projekt, 12+ év tapasztalat.">
+<link rel="canonical" href="https://visionstudio.hu/iparagak/">
+<meta property="og:title" content="Iparágak — Vision Studio Videóprodukció Budapest">
+<meta property="og:description" content="Iparág-specifikus videóprodukcióval szolgálunk hotel, étterem, B2B céges, ingatlan és videoklip területen.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://visionstudio.hu/iparagak/">
+<meta property="og:image" content="https://visionstudio.hu/assets/og-image.png">
+<meta property="og:locale" content="hu_HU">
+<meta property="og:site_name" content="Vision Studio Films Kft.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Iparágak — Vision Studio Budapest">
+<meta name="twitter:description" content="Iparág-specifikus videóprodukció hoteleknek, éttermeknek, cégeknek és ingatlanoknak. Budapest, 8+ év.">
+<meta name="theme-color" content="#030303">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Syne:wght@400;600;700;800&family=Space+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/mobile-fixes.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Vision Studio", "item": "https://visionstudio.hu" },
+    { "@type": "ListItem", "position": 2, "name": "Iparágak", "item": "https://visionstudio.hu/iparagak/" }
+  ]
+}
+</script><style>
+/* ═══════════════════════════════════════════════════════════════
+   IPARÁGAK PAGE — Award-level redesign
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── Grid ── */
+.ind-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2px;
+  background: rgba(200,168,90,0.08);
+  margin-top: 56px;
+}
+@media (max-width: 860px) { .ind-grid { grid-template-columns: 1fr; } }
+
+/* ── Card base ── */
+.ind-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 56px 52px 52px;
+  min-height: 480px;
+  background: #0c0c0c;
+  text-decoration: none;
+  overflow: hidden;
+  transition: background 0.55s cubic-bezier(0.76,0,0.24,1);
+}
+.ind-card:hover { background: #121212; }
+
+/* ── Animated gold frame — 4 segments run clockwise ── */
+.ind-card .bd-t,
+.ind-card .bd-r,
+.ind-card .bd-b,
+.ind-card .bd-l {
+  position: absolute;
+  background: var(--c-gold, #c8a85a);
+  transition-timing-function: cubic-bezier(0.76,0,0.24,1);
+  transition-duration: 0.28s;
+  pointer-events: none;
+  z-index: 10;
+}
+/* top — grows left→right */
+.ind-card .bd-t { top:0; left:0; width:0; height:1px; transition-property:width; transition-delay:0s; }
+/* right — grows top→bottom */
+.ind-card .bd-r { top:0; right:0; width:1px; height:0; transition-property:height; transition-delay:0.28s; }
+/* bottom — grows right→left */
+.ind-card .bd-b { bottom:0; right:0; width:0; height:1px; transition-property:width; transition-delay:0.56s; }
+/* left — grows bottom→top */
+.ind-card .bd-l { bottom:0; left:0; width:1px; height:0; transition-property:height; transition-delay:0.84s; }
+
+.ind-card:hover .bd-t { width:100%; }
+.ind-card:hover .bd-r { height:100%; }
+.ind-card:hover .bd-b { width:100%; }
+.ind-card:hover .bd-l { height:100%; }
+
+/* ── Ghost number backdrop ── */
+.ind-ghost-num {
+  position: absolute;
+  top: 28px;
+  right: 36px;
+  font-family: var(--ff-display, 'Cormorant Garamond', serif);
+  font-size: 120px;
+  font-weight: 300;
+  line-height: 1;
+  color: rgba(200,168,90,0.04);
+  user-select: none;
+  pointer-events: none;
+  transition: color 0.6s ease, transform 0.6s cubic-bezier(0.76,0,0.24,1);
+}
+.ind-card:hover .ind-ghost-num {
+  color: rgba(200,168,90,0.07);
+  transform: scale(1.06) translateY(-4px);
+}
+
+/* ── Industry label ── */
+.ind-tag {
+  font-family: var(--ff-mono, 'Space Mono', monospace);
+  font-size: 9px;
+  letter-spacing: 0.38em;
+  color: rgba(200,168,90,0.35);
+  text-transform: uppercase;
+  margin-bottom: 36px;
+  transition: color 0.4s;
+}
+.ind-card:hover .ind-tag { color: rgba(200,168,90,0.6); }
+
+/* ── Icon ── */
+.ind-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 28px;
+  flex-shrink: 0;
+  transition: transform 0.5s cubic-bezier(0.34,1.56,0.64,1), opacity 0.4s;
+  opacity: 0.55;
+}
+.ind-card:hover .ind-icon { opacity: 0.9; transform: translateY(-3px) scale(1.07); }
+
+/* ── Title ── */
+.ind-title {
+  font-family: var(--ff-display, 'Cormorant Garamond', serif);
+  font-size: clamp(26px, 2.4vw, 38px);
+  font-weight: 300;
+  line-height: 1.15;
+  color: #fff;
+  margin-bottom: 18px;
+  transition: color 0.4s;
+  position: relative;
+  z-index: 2;
+}
+.ind-card:hover .ind-title { color: rgba(220,192,115,0.95); }
+
+/* ── Description ── */
+.ind-desc {
+  font-family: var(--ff-ui, 'Syne', sans-serif);
+  font-size: 13px;
+  line-height: 1.82;
+  color: rgba(255,255,255,0.42);
+  flex: 1;
+  position: relative;
+  z-index: 2;
+  transition: color 0.4s;
+}
+.ind-card:hover .ind-desc { color: rgba(255,255,255,0.58); }
+
+/* ── CTA link ── */
+.ind-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 36px;
+  font-family: var(--ff-mono, 'Space Mono', monospace);
+  font-size: 9px;
+  letter-spacing: 0.32em;
+  color: rgba(200,168,90,0.6);
+  text-transform: uppercase;
+  position: relative;
+  z-index: 2;
+  transition: gap 0.35s cubic-bezier(0.76,0,0.24,1), color 0.35s;
+}
+.ind-link svg { transition: transform 0.35s cubic-bezier(0.76,0,0.24,1); }
+.ind-card:hover .ind-link { gap: 18px; color: rgba(200,168,90,1); }
+.ind-card:hover .ind-link svg { transform: translateX(4px); }
+
+/* ── Subtle vignette on hover ── */
+.ind-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 30% 60%, rgba(200,168,90,0.04) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  pointer-events: none;
+}
+.ind-card:hover::after { opacity: 1; }
+
+/* ── Left accent stripe ── */
+.ind-card::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 20%; bottom: 20%;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, rgba(200,168,90,0.2), transparent);
+  transition: opacity 0.5s, top 0.5s, bottom 0.5s;
+}
+.ind-card:hover::before { top: 10%; bottom: 10%; opacity: 0.6; }
+
+@media (max-width: 600px) {
+  .ind-card { padding: 44px 36px 40px; min-height: 380px; }
+  .ind-ghost-num { font-size: 80px; }
+  .ind-title { font-size: clamp(22px, 6vw, 30px); }
+}
+</style>
+</head>
+<a href="#main-content" class="skip-link">Ugrás a tartalomhoz</a>
+<body class="no-loader">
+<div id="vs-progress" aria-hidden="true"></div>
+<div id="noise" aria-hidden="true"></div>
+<div id="cur-dot" aria-hidden="true"></div>
+<div id="cur-ring" aria-hidden="true"></div>
+<div id="wipe" aria-hidden="true"><div class="wipe-p"></div><div class="wipe-p"></div><div class="wipe-p"></div><div class="wipe-p"></div><div class="wipe-p"></div></div>
+
+<nav id="nav" role="navigation" aria-label="Főmenü">
+  <a href="/index.html" class="nav-logo nav-logo--img" aria-label="Vision Studio főoldal"><img src="../assets/logos/vs-logo-full.webp" alt="Vision Studio" class="nav-logo-img" width="160" height="32" loading="eager"></a>
+        <ul class="nav-menu" role="list">
+    <li><a href="/index.html">Főoldal</a></li>
+    <li><a href="/portfolio.html">Portfólió</a></li>
+    <li><a href="/szolgaltatasok/index.html">Szolgáltatások</a></li>
+    <li><a href="/iparagak/index.html">Iparágak</a></li>
+    <li><a href="/blog.html">Blog</a></li>
+    <li><a href="/faq.html">Árak &amp; GYIK</a></li>
+    <li><a href="/contact.html">Kapcsolat</a></li>
+  </ul>
+  <a href="/contact.html" class="nav-btn">Ajánlatkérés</a>
+  <button class="nav-burger" aria-label="Menü megnyitása" aria-expanded="false"><span></span><span></span><span></span></button>
+</nav>
+
+<main id="main-content">
+
+<section class="landing-hero">
+  <div class="landing-art" aria-hidden="true">
+    <svg viewBox="0 0 1400 600" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="ind_idx_rg" cx="50%" cy="50%" r="55%"><stop offset="0%" stop-color="rgba(200,168,90,.1)"/><stop offset="100%" stop-color="transparent"/></radialGradient>
+      </defs>
+      <rect width="1400" height="600" fill="#0e0e0e"/>
+      <ellipse cx="700" cy="300" rx="600" ry="380" fill="url(#ind_idx_rg)"/>
+      <rect x="0" y="0" width="1400" height="40" fill="rgba(0,0,0,.6)"/>
+      <rect x="0" y="560" width="1400" height="40" fill="rgba(0,0,0,.6)"/>
+      <text x="18" y="26" font-family="monospace" font-size="10" fill="rgba(200,168,90,.5)" letter-spacing="3">REC ●</text>
+      <text x="1330" y="26" font-family="monospace" font-size="10" fill="rgba(200,168,90,.3)" letter-spacing="2">4K</text>
+    </svg>
+  </div>
+  <div class="landing-body">
+    <nav aria-label="Breadcrumb" class="breadcrumb">
+      <a href="/index.html">Főoldal</a><span class="breadcrumb-sep">/</span><span>Iparágak</span>
+    </nav>
+    <div class="sec-label"><div class="sec-label-bar"></div><span class="sec-label-txt">Videó Iparáganként</span></div>
+    <h1 style="font-family:var(--ff-display);font-size:clamp(40px,6.5vw,86px);font-weight:300;line-height:1.05;margin-bottom:24px;margin-top:12px">Prémium videóprodukció — <em style="color:var(--c-gold)">minden iparágnak</em></h1>
+    <p style="font-size:clamp(14px,1.5vw,17px);color:var(--c-light);max-width:540px;line-height:1.75;margin-bottom:36px">A Vision Studio öt fő iparágban gyártott mozis videótartalmat. Fedezd fel az iparág-specifikus betekintéseket, videóstratégiákat és esettanulmányokat a te vállalkozásodnak.</p>
+    <div style="display:flex;gap:16px;flex-wrap:wrap">
+      <a href="/contact.html" class="btn-gold"><span>Projekt megbeszélése →</span><svg width="14" height="10" viewBox="0 0 14 10" fill="none"><path d="M1 5H13M9 1L13 5L9 9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg></a>
+      <a href="/portfolio.html" class="btn-ghost">Portfólió megtekintése <svg width="14" height="10" viewBox="0 0 14 10" fill="none"><path d="M1 5H13M9 1L13 5L9 9" stroke="white" stroke-width="1.2" stroke-linecap="round"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<div class="landing-content">
+  <h2 class="lc-h2">Válaszd ki az <em>iparágadat</em></h2>
+  <p class="lc-p">Minden iparág oldal tartalmazza: miért számít a videó az adott szektorban, bevált videóstratégiák, esettanulmányok a portfóliónkból, kapcsolódó szolgáltatások és közvetlen ajánlatkérési lehetőség. Válaszd ki az iparágadat lentebb.</p>
+
+  <div class="ind-grid" role="list">
+
+    <!-- 01 — HOTEL -->
+    <a class="ind-card" href="/iparagak/hotel-video-keszites.html" role="listitem" aria-label="Hotel Videó Készítés">
+      <span class="bd-t" aria-hidden="true"></span>
+      <span class="bd-r" aria-hidden="true"></span>
+      <span class="bd-b" aria-hidden="true"></span>
+      <span class="bd-l" aria-hidden="true"></span>
+      <div class="ind-ghost-num" aria-hidden="true">01</div>
+      <div class="ind-tag">Szállodipar</div>
+      <svg class="ind-icon" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        <rect x="6" y="4" width="36" height="40" rx="2" stroke="#c8a85a" stroke-width="1.2"/>
+        <rect x="12" y="10" width="24" height="14" rx="1" stroke="#c8a85a" stroke-width="1"/>
+        <rect x="12" y="30" width="10" height="14" rx="1" stroke="#c8a85a" stroke-width="1"/>
+        <rect x="26" y="30" width="10" height="14" rx="1" stroke="#c8a85a" stroke-width="1"/>
+        <circle cx="36" cy="8" r="3" fill="rgba(200,168,90,0.15)" stroke="#c8a85a" stroke-width="0.8"/>
+      </svg>
+      <h3 class="ind-title">Hotel &amp; Hospitality<br>Videó Készítés</h3>
+      <p class="ind-desc">Mozis brand filmek, amelyek növelik a közvetlen foglalásokat, csökkentik az OTA-függőséget és luxuspozicionálást teremtenek 4 és 5-csillagos szállodáknak, boutique hotelek és rezortok számára.</p>
+      <span class="ind-link">Szállodipar felfedezése
+        <svg width="16" height="10" viewBox="0 0 16 10" fill="none"><path d="M1 5H15M11 1L15 5L11 9" stroke="#c8a85a" stroke-width="1.2" stroke-linecap="round"/></svg>
+      </span>
+    </a>
+
+    <!-- 02 — ÉTTEREM -->
+    <a class="ind-card" href="/iparagak/etterem-video-keszites.html" role="listitem" aria-label="Étterem Videó Készítés">
+      <span class="bd-t" aria-hidden="true"></span>
+      <span class="bd-r" aria-hidden="true"></span>
+      <span class="bd-b" aria-hidden="true"></span>
+      <span class="bd-l" aria-hidden="true"></span>
+      <div class="ind-ghost-num" aria-hidden="true">02</div>
+      <div class="ind-tag">F&amp;B · Gasztronómia</div>
+      <svg class="ind-icon" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        <path d="M8 10v8c0 4 4 8 8 8v14" stroke="#c8a85a" stroke-width="1.2" stroke-linecap="round"/>
+        <path d="M16 10v28" stroke="#c8a85a" stroke-width="1.2" stroke-linecap="round"/>
+        <path d="M28 10s8 4 8 14-8 10-8 10v6" stroke="#c8a85a" stroke-width="1.2" stroke-linecap="round"/>
+        <circle cx="38" cy="38" r="4" stroke="#c8a85a" stroke-width="1"/>
+      </svg>
+      <h3 class="ind-title">Étterem &amp; Gasztronómia<br>Videó Készítés</h3>
+      <p class="ind-desc">Gasztronómiai filmek, chef portrék és élelmiszer-filmezés, amelyek növelik az asztalfoglalásokat és prémium pozicionálást teremtenek. A videóval rendelkező éttermek 120%-kal több foglalást kapnak.</p>
+      <span class="ind-link">F&amp;B szektor felfedezése
+        <svg width="16" height="10" viewBox="0 0 16 10" fill="none"><path d="M1 5H15M11 1L15 5L11 9" stroke="#c8a85a" stroke-width="1.2" stroke-linecap="round"/></svg>
+      </span>
+    </a>
+
+    <!-- 03 — B2B CÉGES -->
+    <a class="ind-card" href="/iparagak/b2b-video.html" role="listitem" aria-label="B2B Céges Videó">
+      <span class="bd-t" aria-hidden="true"></span>
+      <span class="bd-r" aria-hidden="true"></span>
+      <span class="bd-b" aria-hidden="true"></span>
+      <span class="bd-l" aria-hidden="true"></span>
+      <div class="ind-ghost-num" aria-hidden="true">03</div>
+      <div class="ind-tag">Vállalati · B2B</div>
+      <svg class="ind-icon" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        <rect x="6" y="6" width="36" height="36" rx="2" stroke="#c8a85a" stroke-width="1.2"/>
+        <path d="M14 18h20M14 24h14M14 30h9" stroke="#c8a85a" stroke-width="1.2" stroke-linecap="round"/>
+        <circle cx="36" cy="12" r="5" fill="rgba(200,168,90,0.12)" stroke="#c8a85a" stroke-width="1"/>
+        <path d="M34 12l1.5 1.5L38 10" stroke="#c8a85a" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <h3 class="ind-title">B2B Vállalati<br>Videó Készítés</h3>
+      <p class="ind-desc">Brand filmek, employer branding, ügyfél-testimonialok és sustainability tartalom Magyarország vezető cégei számára — Bosch, LEGO, OTP és Linde. B2B döntéshozóknak tervezve, KPI-ra optimalizálva.</p>
+      <span class="ind-link">Vállalati szektor felfedezése
+        <svg width="16" height="10" viewBox="0 0 16 10" fill="none"><path d="M1 5H15M11 1L15 5L11 9" stroke="#c8a85a" stroke-width="1.2" stroke-linecap="round"/></svg>
+      </span>
+    </a>
+
+    <!-- 04 — INGATLAN -->
+    <a class="ind-card" href="/iparagak/ingatlan-video-keszites.html" role="listitem" aria-label="Ingatlan Videó Készítés">
+      <span class="bd-t" aria-hidden="true"></span>
+      <span class="bd-r" aria-hidden="true"></span>
+      <span class="bd-b" aria-hidden="true"></span>
+      <span class="bd-l" aria-hidden="true"></span>
+      <div class="ind-ghost-num" aria-hidden="true">04</div>
+      <div class="ind-tag">Ingatlan · Fejlesztés</div>
+      <svg class="ind-icon" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        <path d="M6 42V22L24 8l18 14v20H6z" stroke="#c8a85a" stroke-width="1.2" stroke-linejoin="round"/>
+        <rect x="18" y="30" width="12" height="12" rx="1" stroke="#c8a85a" stroke-width="1"/>
+        <path d="M10 22l14-12 14 12" stroke="#c8a85a" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+        <circle cx="40" cy="12" r="4" stroke="#c8a85a" stroke-width="1"/>
+        <path d="M38.5 12l1 1 2-2" stroke="#c8a85a" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <h3 class="ind-title">Ingatlan &amp; Fejlesztés<br>Videó Készítés</h3>
+      <p class="ind-desc">Luxusingatlan filmek, engedéllyel rendelkező drón légifelvételek és fejlesztési marketing tartalom. A videóval rendelkező hirdetések 403%-kal több érdeklődőt kapnak — mérhetően.</p>
+      <span class="ind-link">Ingatlan szektor felfedezése
+        <svg width="16" height="10" viewBox="0 0 16 10" fill="none"><path d="M1 5H15M11 1L15 5L11 9" stroke="#c8a85a" stroke-width="1.2" stroke-linecap="round"/></svg>
+      </span>
+    </a>
+
+    <!-- 05 — VIDEOKLIP -->
+    <a class="ind-card" href="/iparagak/videoklip-keszites.html" role="listitem" aria-label="Videoklip Készítés">
+      <span class="bd-t" aria-hidden="true"></span>
+      <span class="bd-r" aria-hidden="true"></span>
+      <span class="bd-b" aria-hidden="true"></span>
+      <span class="bd-l" aria-hidden="true"></span>
+      <div class="ind-ghost-num" aria-hidden="true">05</div>
+      <div class="ind-tag">Kreatív · Music &amp; Brand</div>
+      <svg class="ind-icon" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        <rect x="4" y="10" width="40" height="28" rx="2" stroke="#c8a85a" stroke-width="1.2"/>
+        <path d="M20 18L34 24L20 30V18Z" fill="rgba(200,168,90,0.12)" stroke="#c8a85a" stroke-width="1.2" stroke-linejoin="round"/>
+        <circle cx="8" cy="8" r="2.5" fill="rgba(200,168,90,0.3)"/>
+        <circle cx="40" cy="8" r="2.5" fill="rgba(200,168,90,0.3)"/>
+        <circle cx="8" cy="40" r="2.5" fill="rgba(200,168,90,0.3)"/>
+        <circle cx="40" cy="40" r="2.5" fill="rgba(200,168,90,0.3)"/>
+      </svg>
+      <h3 class="ind-title">Videoklip &amp; Reklámfilm<br>Készítés</h3>
+      <p class="ind-desc">Prémium zenei videoklipek, reklámfilmek és branded content mozis minőségben. Termékbevezetések, kampányok és brand aktivációk — 150M+ nézet a Hell Energy Launch kampánynál.</p>
+      <span class="ind-link">Kreatív szektor felfedezése
+        <svg width="16" height="10" viewBox="0 0 16 10" fill="none"><path d="M1 5H15M11 1L15 5L11 9" stroke="#c8a85a" stroke-width="1.2" stroke-linecap="round"/></svg>
+      </span>
+    </a>
+
+    <!-- 06 — RENDEZVÉNY -->
+    <a class="ind-card" href="/iparagak/rendezveny-video-keszites.html" role="listitem" aria-label="Rendezvény Videó Készítés">
+      <span class="bd-t" aria-hidden="true"></span>
+      <span class="bd-r" aria-hidden="true"></span>
+      <span class="bd-b" aria-hidden="true"></span>
+      <span class="bd-l" aria-hidden="true"></span>
+      <div class="ind-ghost-num" aria-hidden="true">06</div>
+      <div class="ind-tag">Event · Konferencia</div>
+      <svg class="ind-icon" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        <circle cx="24" cy="20" r="12" stroke="#c8a85a" stroke-width="1.2"/>
+        <path d="M12 20c0 0 3 16 12 20s12-20 12-20" stroke="#c8a85a" stroke-width="1" stroke-linecap="round"/>
+        <line x1="12" y1="20" x2="36" y2="20" stroke="#c8a85a" stroke-width="1" stroke-linecap="round"/>
+        <line x1="24" y1="8" x2="24" y2="32" stroke="#c8a85a" stroke-width="1" stroke-linecap="round"/>
+        <path d="M16 40h16M24 40v4" stroke="#c8a85a" stroke-width="1.2" stroke-linecap="round"/>
+      </svg>
+      <h3 class="ind-title">Rendezvény &amp; Esemény<br>Videó Készítés</h3>
+      <p class="ind-desc">Aftermovie, konferencia film, céges esemény videó és gála produkció. Az esemény elmúlik — a film örök. 50+ rendezvény film, 24h teaser szállítás, azonnali highlight reel.</p>
+      <span class="ind-link">Event szektor felfedezése
+        <svg width="16" height="10" viewBox="0 0 16 10" fill="none"><path d="M1 5H15M11 1L15 5L11 9" stroke="#c8a85a" stroke-width="1.2" stroke-linecap="round"/></svg>
+      </span>
+    </a>
+
+  </div>
+
+  <div class="cta-inline" style="margin-top:60px">
+    <h3>Nem tudod melyik oldal a neked való? <em style="font-style:italic;color:var(--c-gold)">Beszéljük meg.</em></h3>
+    <p>Minden iparágban dolgozunk és segítünk meghatározni a megfelelő produkciós formátumot a vállalkozásodnak. Kötelezettség nélkül.</p>
+    <div class="btns">
+      <a href="/contact.html" class="btn-gold"><span>Projekt megbeszélése →</span><svg width="14" height="10" viewBox="0 0 14 10" fill="none"><path d="M1 5H13M9 1L13 5L9 9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg></a>
+      <a href="/portfolio.html" class="btn-ghost">Portfólió megtekintése <svg width="14" height="10" viewBox="0 0 14 10" fill="none"><path d="M1 5H13M9 1L13 5L9 9" stroke="white" stroke-width="1.2" stroke-linecap="round"/></svg></a>
+    </div>
+  </div>
+
+</div>
+</main>
+
+<footer role="contentinfo">
+  <div class="ft-main">
+    <div>
+      <a href="/index.html" class="nav-logo nav-logo--img" style="margin-bottom:20px" aria-label="Vision Studio főoldal"><img src="../assets/logos/vs-logo-full.webp" alt="Vision Studio" class="nav-logo-img nav-logo-img--ft" width="148" height="30" loading="lazy"></a>
+      <p class="ft-brand-desc">Prémium videóprodukciós stúdió Budapest szívéből. 1500+ videó, 30+ prémium márka, ügyfelek, személyes odafigyelés minden munkán.</p>
+    </div>
+    <div>
+      <div class="ft-col-h">Szolgáltatások</div>
+      <ul class="ft-links">
+        <li><a href="/szolgaltatasok/reklamfilm-keszites.html">Reklámfilm Készítés</a></li>
+        <li><a href="/szolgaltatasok/ceges-video-keszites.html">Céges Videó</a></li>
+        <li><a href="/szolgaltatasok/brand-film-keszites.html">Brand Film</a></li>
+        <li><a href="/szolgaltatasok/social-media-video.html">Social Media Videó</a></li>
+        <li><a href="/szolgaltatasok/dron-videozas.html">Drón Videózás</a></li>
+        <li><a href="/szolgaltatasok/video-marketing.html">Videó Marketing</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="ft-col-h">Iparágak</div>
+      <ul class="ft-links">
+        <li><a href="/iparagak/hotel-video-keszites.html">Hotel</a></li>
+        <li><a href="/iparagak/etterem-video-keszites.html">Étterem</a></li>
+        <li><a href="/iparagak/b2b-video.html">B2B Céges</a></li>
+        <li><a href="/iparagak/ingatlan-video-keszites.html">Ingatlan</a></li>
+        <li><a href="/iparagak/videoklip-keszites.html">Videoklip</a></li>
+        <li><a href="/iparagak/rendezveny-video-keszites.html">Rendezvény</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="ft-col-h">Kapcsolat</div>
+      <div class="ft-contact-item"><div class="ft-contact-l">Email</div><a href="mailto:hello@visionstudio.hu" class="ft-contact-v">hello@visionstudio.hu</a></div>
+      <div class="ft-contact-item"><div class="ft-contact-l">Telefon</div><a href="tel:+36303462267" class="ft-contact-v">+36 30 346 22 67</a></div>
+      <div class="ft-contact-item"><div class="ft-contact-l">Helyszín</div><span class="ft-contact-v">Budapest, Magyarország</span></div>
+    </div>
+  </div>
+  <div class="ft-bottom">
+    <span class="ft-copy">© 2026 Vision Studio Films Kft. — Minden jog fenntartva.</span>
+    <a href="/contact.html" class="ft-copy" style="color:var(--c-gold)">Projekt megbeszélése →</a>
+  </div>
+</footer>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script defer src="../data/projects.js" ></script>
+<script defer src="../js/main.js"></script><script defer src="../js/performance.js"></script>
+</body>
+</html>
