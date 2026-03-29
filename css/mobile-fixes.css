@@ -614,8 +614,19 @@ footer .nav-logo--img:hover .nav-logo-img--ft {
     gap: 2px !important;
   }
 
-  .pf-card {
+  /* FIX: pf-item uses aspect-ratio:16/9 by default (~242px),
+     but pf-card inside it was set to 64vw (~275px on iPhone 15 Pro Max).
+     This mismatch caused cards to overflow into each other.
+     Solution: remove aspect-ratio on pf-item and set explicit height
+     so the grid row matches the card height exactly. */
+  .pf-item {
+    aspect-ratio: unset !important;
     height: 64vw !important;
+    min-height: 200px !important;
+  }
+
+  .pf-card {
+    height: 100% !important;
     min-height: 200px !important;
   }
 }
