@@ -1,0 +1,55 @@
+
+# --- T-12: Étterem video merge ---
+/iparagak/etterem-video-keszites.html       /etterem-video-keszites-budapest/               301
+/iparagak/etterem-video-keszites            /etterem-video-keszites-budapest/               301
+/szolgaltatasok/etterem-video.html          /etterem-video-keszites-budapest/               301
+/szolgaltatasok/etterem-video               /etterem-video-keszites-budapest/               301
+
+# --- T-13: /arak/ pricing pillar ---
+/blog/reklamfilm-keszites-ara.html          /arak/                                          301
+/blog/reklamfilm-keszites-ara               /arak/                                          301
+/blog/mennyibe-kerul-egy-ceges-video.html   /arak/                                          301
+/blog/mennyibe-kerul-egy-ceges-video        /arak/                                          301
+
+# --- T-14: Best studio articles merge ---
+/blog/legjobb-reklamfilm-studiok-magyarorszag.html  /blog/legjobb-video-gyarto-cegek-budapest-2026.html  301
+/blog/legjobb-reklamfilm-studiok-magyarorszag       /blog/legjobb-video-gyarto-cegek-budapest-2026.html  301
+
+# --- T-19: B2B / Céges video merge ---
+/iparagak/b2b-video.html                    /szolgaltatasok/ceges-video-keszites.html       301
+/iparagak/b2b-video                         /szolgaltatasok/ceges-video-keszites.html       301
+
+# --- T-18: Blog article clean URL-ek ---
+/blog/blog-article-1-reklamfilm-keszites-menete.html   /blog/reklamfilm-keszites-menete.html          301
+/blog/blog-article-1-reklamfilm-keszites-menete        /blog/reklamfilm-keszites-menete.html          301
+/blog/blog-article-2-social-media-video-marketing.html /blog/social-media-video-marketing-b2b.html    301
+/blog/blog-article-2-social-media-video-marketing      /blog/social-media-video-marketing-b2b.html    301
+/blog/blog-article-3-video-marketing-roi.html          /blog/video-marketing-roi-cegeknek.html        301
+/blog/blog-article-3-video-marketing-roi               /blog/video-marketing-roi-cegeknek.html        301
+
+# --- T-25: Avalon portfolio merge ---
+/portfolio/avalon-resort-hospitality.html   /portfolio/avalon-resort-brand.html             301
+/portfolio/avalon-resort-hospitality        /portfolio/avalon-resort-brand.html             301
+# ============================================================
+# Vision Studio — Netlify _redirects
+# Szerver-szintű 301 átirányítások
+# ============================================================
+
+# --- T-03: Redirect stub fájlok cseréje proper 301-re ---
+/blog/employer-branding-video.html          /blog/employer-branding-video-keszites.html     301
+/blog/hotel-marketing-video.html            /blog/hotel-marketing-video-keszites.html       301
+/blog/reklamfilm-keszites-koltsegei.html    /arak/                                          301
+/blog/video-marketing-strategia-2025.html   /blog/video-marketing-strategia-2026.html       301
+/iparagak/b2b-ceges-video.html              /szolgaltatasok/ceges-video-keszites.html        301
+/szolgaltatasok/drone-videozas.html         /szolgaltatasok/dron-videozas.html              301
+
+# --- T-10: Portfolio duplikáció: Hell Energy ---
+/portfolio/hell-energy-ai.html              /portfolio/hell-energy.html                     301
+
+# --- T-11: Hotel video merge ---
+/iparagak/hotel-video-keszites.html         /hotel-video-keszites-budapest/                 301
+/iparagak/hotel-video-keszites              /hotel-video-keszites-budapest/                 301
+/szolgaltatasok/hotel-marketing-video.html  /hotel-video-keszites-budapest/                 301
+/szolgaltatasok/hotel-marketing-video       /hotel-video-keszites-budapest/                 301
+
+# ============================================================

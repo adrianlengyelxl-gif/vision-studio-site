@@ -4134,18 +4134,25 @@ window.addEventListener('load', function() {
   track.style.setProperty('transform',         'translateX(0) translateZ(0)', 'important');
 
   var pos      = 0;       /* current translateX in px */
-  var speed    = 0.9;     /* px per frame at 60fps ≈ 54px/s — matches CSS 30s animation speed */
+  /* Speed fix: 22s CSS animation target.
+     Typical rowWidth ≈ 3496px (23 logos × 152px).
+     3496 / 22s / 60fps ≈ 2.65 px/frame — much faster than original 0.9 */
+  var speed    = 2.65;
   var rafId    = null;
   var paused   = false;
   var rowWidth = 0;
 
   function measureRow() {
-    /* Force layout to get accurate width */
-    rowWidth = row.getBoundingClientRect().width;
-    if (!rowWidth) {
-      /* Fallback: estimate from item count × item width */
-      var items = row.querySelectorAll('.logo-item');
-      rowWidth  = items.length * 152; /* 120px + 32px gap */
+    /* getBoundingClientRect gives accurate rendered width */
+    var rect = row.getBoundingClientRect();
+    rowWidth = rect.width;
+    /* Fallback: compute from CSS item width + gap (reliable even before images load) */
+    if (!rowWidth || rowWidth < 100) {
+      var items   = row.querySelectorAll('.logo-item');
+      var isMob   = window.innerWidth <= 767;
+      var itemW   = isMob ? 120 : 160; /* .logo-item width on mobile vs desktop */
+      var gapW    = isMob ?  32 :  48; /* .logo-row gap on mobile vs desktop */
+      rowWidth    = items.length * (itemW + gapW);
     }
   }
 
@@ -4163,20 +4170,29 @@ window.addEventListener('load', function() {
     rafId = requestAnimationFrame(step);
   }
 
-  /* Pause when off-screen to save battery */
+  /* Pause when off-screen to save battery.
+     Note: IO fires immediately on observe() with current state.
+     Logo section is below the fold on page load → isIntersecting=false → paused=true.
+     That's correct — we don't want to burn CPU when off-screen.
+     Animation resumes automatically when user scrolls down to the section. */
   var logoStrip = document.querySelector('.logo-strip');
   if (logoStrip && 'IntersectionObserver' in window) {
     var io = new IntersectionObserver(function(entries) {
       paused = !entries[0].isIntersecting;
+      /* Re-measure when section enters view (lazy images may now be loaded) */
+      if (!paused && rowWidth < 100) { measureRow(); }
     }, { threshold: 0 });
     io.observe(logoStrip);
   }
 
-  /* Start after images have a chance to load (accurate width measurement) */
+  /* Start after images have a chance to load (accurate width measurement).
+     Multiple re-measures at different delays handle lazy-loaded logo images. */
   function start() {
     measureRow();
-    /* Re-measure after 500ms — images may still be loading */
-    setTimeout(measureRow, 500);
+    /* Re-measure at intervals — logo images may still be loading */
+    setTimeout(measureRow, 300);
+    setTimeout(measureRow, 800);
+    setTimeout(measureRow, 1500);
     rafId = requestAnimationFrame(step);
   }
 
