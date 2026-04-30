@@ -2,76 +2,69 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <!-- FŐOLDALAK -->
-  <url><loc>https://visionstudio.hu/</loc><lastmod>2026-03-19</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://visionstudio.hu/portfolio.html</loc><lastmod>2026-03-19</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://visionstudio.hu/blog.html</loc><lastmod>2026-03-19</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://visionstudio.hu/contact.html</loc><lastmod>2026-03-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://visionstudio.hu/faq.html</loc><lastmod>2026-03-19</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://visionstudio.hu/about.html</loc><lastmod>2026-03-19</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://visionstudio.hu/video-production-budapest.html</loc><lastmod>2026-03-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://visionstudio.hu/</loc><lastmod>2026-04-28</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://visionstudio.hu/portfolio</loc><lastmod>2026-04-28</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://visionstudio.hu/blog</loc><lastmod>2026-04-28</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://visionstudio.hu/contact</loc><lastmod>2026-04-28</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://visionstudio.hu/faq</loc><lastmod>2026-04-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://visionstudio.hu/about</loc><lastmod>2026-04-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://visionstudio.hu/video-production-budapest</loc><lastmod>2026-04-28</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- ÚJ PILLAR OLDALAK (merged) -->
+  <url><loc>https://visionstudio.hu/hotel-video-keszites-budapest/</loc><lastmod>2026-04-28</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://visionstudio.hu/etterem-video-keszites-budapest/</loc><lastmod>2026-04-28</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://visionstudio.hu/arak/</loc><lastmod>2026-04-28</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
 
   <!-- SZOLGÁLTATÁSOK -->
-  <url><loc>https://visionstudio.hu/szolgaltatasok/</loc><lastmod>2026-03-19</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://visionstudio.hu/szolgaltatasok/reklamfilm-keszites.html</loc><lastmod>2026-03-19</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://visionstudio.hu/szolgaltatasok/ceges-video-keszites.html</loc><lastmod>2026-03-19</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://visionstudio.hu/szolgaltatasok/brand-film-keszites.html</loc><lastmod>2026-03-19</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://visionstudio.hu/szolgaltatasok/social-media-video.html</loc><lastmod>2026-03-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://visionstudio.hu/szolgaltatasok/dron-videozas.html</loc><lastmod>2026-03-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://visionstudio.hu/szolgaltatasok/video-marketing.html</loc><lastmod>2026-03-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://visionstudio.hu/szolgaltatasok/</loc><lastmod>2026-04-28</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://visionstudio.hu/szolgaltatasok/reklamfilm-keszites</loc><lastmod>2026-04-28</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://visionstudio.hu/szolgaltatasok/ceges-video-keszites</loc><lastmod>2026-04-28</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://visionstudio.hu/szolgaltatasok/brand-film-keszites</loc><lastmod>2026-04-28</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://visionstudio.hu/szolgaltatasok/social-media-video</loc><lastmod>2026-04-28</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://visionstudio.hu/szolgaltatasok/dron-videozas</loc><lastmod>2026-04-28</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://visionstudio.hu/szolgaltatasok/video-marketing</loc><lastmod>2026-04-28</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://visionstudio.hu/iparagak/</loc><lastmod>2026-04-28</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <!-- IPARÁGAK -->
-  <url><loc>https://visionstudio.hu/iparagak/</loc><lastmod>2026-03-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://visionstudio.hu/iparagak/hotel-video-keszites.html</loc><lastmod>2026-03-19</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://visionstudio.hu/iparagak/etterem-video-keszites.html</loc><lastmod>2026-03-19</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://visionstudio.hu/iparagak/b2b-video.html</loc><lastmod>2026-03-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://visionstudio.hu/iparagak/rendezveny-video-keszites.html</loc><lastmod>2026-03-19</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://visionstudio.hu/iparagak/ingatlan-video-keszites.html</loc><lastmod>2026-03-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://visionstudio.hu/iparagak/videoklip-keszites.html</loc><lastmod>2026-03-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://visionstudio.hu/iparagak/rendezveny-video-keszites</loc><lastmod>2026-04-28</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://visionstudio.hu/iparagak/ingatlan-video-keszites</loc><lastmod>2026-04-28</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://visionstudio.hu/iparagak/videoklip-keszites</loc><lastmod>2026-04-28</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://visionstudio.hu/portfolio/corinthia-brand</loc><lastmod>2026-04-28</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
 
   <!-- PORTFÓLIÓ -->
-  <url><loc>https://visionstudio.hu/portfolio/corinthia-brand.html</loc><lastmod>2026-03-19</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://visionstudio.hu/portfolio/nobu-gastro.html</loc><lastmod>2026-03-19</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://visionstudio.hu/portfolio/otp-tv-spot.html</loc><lastmod>2026-03-19</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://visionstudio.hu/portfolio/avalon-resort-brand.html</loc><lastmod>2026-03-21</lastmod><changefreq>yearly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://visionstudio.hu/portfolio/avalon-resort-hospitality.html</loc><lastmod>2026-03-24</lastmod><changefreq>yearly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://visionstudio.hu/portfolio/telekom-social.html</loc><lastmod>2026-03-19</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://visionstudio.hu/portfolio/majka-futtys-videoklip.html</loc><lastmod>2026-03-22</lastmod><changefreq>yearly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://visionstudio.hu/portfolio/xixo-tutty-fruity-tv-kampany.html</loc><lastmod>2026-03-22</lastmod><changefreq>yearly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://visionstudio.hu/portfolio/lego-inside-brick.html</loc><lastmod>2026-03-22</lastmod><changefreq>yearly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://visionstudio.hu/portfolio/hell-energy.html</loc><lastmod>2026-03-19</lastmod><changefreq>yearly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://visionstudio.hu/portfolio/bosch-corporate.html</loc><lastmod>2026-03-19</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://visionstudio.hu/portfolio/argon-ker-kavicsbanya.html</loc><lastmod>2026-03-24</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://visionstudio.hu/portfolio/colas-aerial.html</loc><lastmod>2026-03-19</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://visionstudio.hu/portfolio/havasi-koncert.html</loc><lastmod>2026-03-21</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://visionstudio.hu/portfolio/nobu-gastro</loc><lastmod>2026-04-28</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://visionstudio.hu/portfolio/otp-tv-spot</loc><lastmod>2026-04-28</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://visionstudio.hu/portfolio/avalon-resort-brand</loc><lastmod>2026-04-28</lastmod><changefreq>yearly</changefreq><priority>0.8</priority></url>
+  <!-- avalon-resort-hospitality.html → 301 redirected to avalon-resort-brand -->
+  <url><loc>https://visionstudio.hu/portfolio/majka-futtys-videoklip</loc><lastmod>2026-04-28</lastmod><changefreq>yearly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://visionstudio.hu/portfolio/xixo-tutty-fruity-tv-kampany</loc><lastmod>2026-04-28</lastmod><changefreq>yearly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://visionstudio.hu/portfolio/lego-inside-brick</loc><lastmod>2026-04-28</lastmod><changefreq>yearly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://visionstudio.hu/portfolio/hell-energy</loc><lastmod>2026-04-28</lastmod><changefreq>yearly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://visionstudio.hu/portfolio/bosch-corporate</loc><lastmod>2026-04-28</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://visionstudio.hu/portfolio/argon-ker-kavicsbanya</loc><lastmod>2026-04-28</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://visionstudio.hu/portfolio/colas-aerial</loc><lastmod>2026-04-28</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://visionstudio.hu/portfolio/havasi-koncert</loc><lastmod>2026-04-28</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://visionstudio.hu/case-studies/hell-energy-launch-campaign</loc><lastmod>2026-04-28</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <!-- CASE STUDIES -->
-  <url><loc>https://visionstudio.hu/case-studies/hell-energy-launch-campaign.html</loc><lastmod>2026-03-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://visionstudio.hu/blog/video-marketing-strategia-2026</loc><lastmod>2026-04-28</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
-  <!-- BLOG — meglévő cikkek -->
-  <url><loc>https://visionstudio.hu/blog/reklamfilm-keszites-ara.html</loc><lastmod>2026-03-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://visionstudio.hu/blog/reklamfilm-keszites-koltsegei.html</loc><lastmod>2026-03-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://visionstudio.hu/blog/video-marketing-strategia-2026.html</loc><lastmod>2026-03-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://visionstudio.hu/blog/social-media-video-trendek-2026.html</loc><lastmod>2026-03-19</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://visionstudio.hu/blog/hotel-marketing-video-keszites.html</loc><lastmod>2026-03-19</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://visionstudio.hu/blog/mennyibe-kerul-egy-ceges-video.html</loc><lastmod>2026-03-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://visionstudio.hu/blog/brand-film-vs-reklamfilm.html</loc><lastmod>2026-03-19</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://visionstudio.hu/blog/ceges-video-keszites-menete.html</loc><lastmod>2026-03-19</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://visionstudio.hu/blog/employer-branding-video-keszites.html</loc><lastmod>2026-03-19</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://visionstudio.hu/blog/video-marketing-b2b-cegeknek.html</loc><lastmod>2026-03-19</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://visionstudio.hu/blog/etterem-video-keszites-foglalasok.html</loc><lastmod>2026-03-19</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <!-- BLOG -->
+  <url><loc>https://visionstudio.hu/blog/social-media-video-trendek-2026</loc><lastmod>2026-04-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://visionstudio.hu/blog/hotel-marketing-video-keszites</loc><lastmod>2026-04-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://visionstudio.hu/blog/brand-film-vs-reklamfilm</loc><lastmod>2026-04-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://visionstudio.hu/blog/ceges-video-keszites-menete</loc><lastmod>2026-04-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://visionstudio.hu/blog/employer-branding-video-keszites</loc><lastmod>2026-04-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://visionstudio.hu/blog/video-marketing-b2b-cegeknek</loc><lastmod>2026-04-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://visionstudio.hu/blog/etterem-video-keszites-foglalasok</loc><lastmod>2026-04-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://visionstudio.hu/blog/legjobb-video-gyarto-cegek-budapest-2026</loc><lastmod>2026-04-28</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://visionstudio.hu/blog/video-gyarto-ceg-valasztas-utmutato</loc><lastmod>2026-04-28</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://visionstudio.hu/blog/reklamfilm-studio-valasztas-checklista</loc><lastmod>2026-04-28</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://visionstudio.hu/blog/etterem-video-marketing</loc><lastmod>2026-04-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://visionstudio.hu/blog/reklamfilm-keszites-menete</loc><lastmod>2026-04-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://visionstudio.hu/blog/social-media-video-marketing-b2b</loc><lastmod>2026-04-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://visionstudio.hu/blog/video-marketing-roi-cegeknek</loc><lastmod>2026-04-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
-  <!-- BLOG — Új revenue oldalak (2026-03-19) -->
-  <url><loc>https://visionstudio.hu/blog/legjobb-video-gyarto-cegek-budapest-2026.html</loc><lastmod>2026-03-19</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://visionstudio.hu/blog/legjobb-reklamfilm-studiok-magyarorszag.html</loc><lastmod>2026-03-19</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://visionstudio.hu/blog/video-gyarto-ceg-valasztas-utmutato.html</loc><lastmod>2026-03-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://visionstudio.hu/blog/reklamfilm-studio-valasztas-checklista.html</loc><lastmod>2026-03-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://visionstudio.hu/blog/etterem-video-marketing.html</loc><lastmod>2026-03-25</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-
-  <!-- BLOG — Korábbi cikkek (önálló URL-ek) -->
-  <url><loc>https://visionstudio.hu/blog/blog-article-1-reklamfilm-keszites-menete.html</loc><lastmod>2026-03-25</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://visionstudio.hu/blog/blog-article-2-social-media-video-marketing.html</loc><lastmod>2026-03-25</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://visionstudio.hu/blog/blog-article-3-video-marketing-roi.html</loc><lastmod>2026-03-25</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-
-  <!-- 404 oldal kizárva a sitemapből -->
+  <!-- koszonom.html és 404.html szándékosan kizárva -->
 
 </urlset>

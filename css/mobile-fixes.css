@@ -614,19 +614,8 @@ footer .nav-logo--img:hover .nav-logo-img--ft {
     gap: 2px !important;
   }
 
-  /* FIX: pf-item uses aspect-ratio:16/9 by default (~242px),
-     but pf-card inside it was set to 64vw (~275px on iPhone 15 Pro Max).
-     This mismatch caused cards to overflow into each other.
-     Solution: remove aspect-ratio on pf-item and set explicit height
-     so the grid row matches the card height exactly. */
-  .pf-item {
-    aspect-ratio: unset !important;
-    height: 64vw !important;
-    min-height: 200px !important;
-  }
-
   .pf-card {
-    height: 100% !important;
+    height: 64vw !important;
     min-height: 200px !important;
   }
 }
@@ -968,3 +957,148 @@ footer .nav-logo--img:hover .nav-logo-img--ft {
     height: 40px !important;
   }
 }
+
+
+/* ══════════════════════════════════════════════════════════════
+   ISSUE 1 FIX — HERO SECTION OVERLAP (MOBILE + DESKTOP)
+   Root cause: .hero-stats inside .hero-body gets
+     position:absolute; bottom:0; right:0 from the shared class.
+     Its inline style="display:flex" overrides display:none rules.
+     Result: it floats to the bottom-right corner of hero-body,
+     overlapping hero-sub, hero-ctas and "Visszajelzünk…" — on
+     BOTH mobile AND desktop.
+   Fix: globally convert the inner stats to in-flow (no media
+     query), so it sits naturally between h1 and hero-sub.
+     The outer bottom-bar (#hero > .hero-stats) is unaffected —
+     it's a sibling of hero-body, positioned relative to #hero.
+   ══════════════════════════════════════════════════════════════ */
+
+/* ── GLOBAL (all screen sizes): pull inner stats into flow ── */
+.hero-body > .hero-stats {
+  position:    relative !important;
+  bottom:      auto     !important;
+  right:       auto     !important;
+  top:         auto     !important;
+  left:        auto     !important;
+  border:      none     !important;
+  display:     flex     !important;
+  flex-wrap:   wrap     !important;
+  align-items: center   !important;
+  gap:         12px 28px !important;
+  margin:      20px 0 24px !important;
+  width:       100%     !important;
+}
+
+@media (max-width: 767px) {
+
+  /* Stat numbers: slightly smaller on narrow screens */
+  .hero-body > .hero-stats span[style*="font-size:clamp(22px"] {
+    font-size: clamp(18px, 5vw, 26px) !important;
+  }
+
+  /* ── 2. Hide the duplicate bottom-of-hero stats bar ──────── */
+  /* (#hero > .hero-stats is position:absolute;bottom:0;right:0
+     and only meant for desktop) */
+  #hero > .hero-stats {
+    display: none !important;
+  }
+
+  /* ── 3. Hero body: vertical padding so content clears nav ── */
+  .hero-body {
+    padding-top:    clamp(88px, 20vw, 130px) !important;
+    padding-bottom: clamp(40px, 10vw, 70px)  !important;
+    width:          100% !important;
+    box-sizing:     border-box !important;
+  }
+
+  /* ── 4. H1 — readable size, controlled line-height ─────── */
+  .hero-h1 {
+    font-size:   clamp(34px, 8.5vw, 52px) !important;
+    line-height: 1.12  !important;
+    margin-bottom: 20px !important;
+    letter-spacing: -0.02em !important;
+  }
+
+  /* ── 5. Eyebrow strip — prevent horizontal overflow ─────── */
+  .hero-eyebrow {
+    overflow:  hidden  !important;
+    margin-bottom: 18px !important;
+  }
+  .eyebrow-txt {
+    font-size:   9px   !important;
+    white-space: nowrap !important;
+    overflow:    hidden !important;
+    text-overflow: ellipsis !important;
+    max-width: calc(100vw - 100px) !important;
+    letter-spacing: 0.28em !important;
+  }
+
+  /* ── 6. Sub-text: full width, proper margin ──────────────── */
+  .hero-sub {
+    max-width:     100%  !important;
+    font-size:     14px  !important;
+    line-height:   1.75  !important;
+    margin-bottom: 24px  !important;
+  }
+
+  /* ── 7. CTA row: stack vertically, left-aligned ─────────── */
+  .hero-ctas {
+    flex-direction: column   !important;
+    align-items:    flex-start !important;
+    gap:            12px     !important;
+    margin-bottom:  16px     !important;
+  }
+
+  /* ── 8. Hide scroll indicator — saves space, not needed ─── */
+  .hero-scroll {
+    display: none !important;
+  }
+
+}
+/* END ISSUE 1 FIX */
+
+
+/* ══════════════════════════════════════════════════════════════
+   ISSUE 2 FIX — LOGO CAROUSEL ANIMATION ON MOBILE (CSS layer)
+   Root cause: .logo-strip has contain:paint which internally
+   creates an overflow:hidden context — this is a known iOS
+   Safari bug that stops CSS transform animations on children.
+   Fix: remove contain:paint, use clip-path:inset(0) instead.
+   The JS RAF fallback (already in main.js) handles the actual
+   animation; this CSS fix ensures it works if JS is slow to
+   start AND prevents the contain:paint from killing the JS
+   transform updates too.
+   ══════════════════════════════════════════════════════════════ */
+
+@media (max-width: 767px) {
+
+  /* ── Remove contain:paint; keep visual clip via clip-path ── */
+  .logo-strip {
+    contain:           none       !important;  /* was "paint" — kills iOS anim */
+    clip-path:         inset(0)   !important;  /* same visual clipping, no side-fx */
+    overflow:          visible    !important;  /* let JS translateX escape the box */
+    -webkit-clip-path: inset(0)   !important;
+  }
+
+  /* ── Logo track: ensure GPU layer, animation can run ─────── */
+  .logo-track {
+    will-change:         transform !important;
+    transform:           translateX(0) translateZ(0) !important;
+    -webkit-transform:   translateX(0) translateZ(0) !important;
+    /* Keep animation as CSS fallback (JS RAF overrides this on touch) */
+    animation:           scrollLogos 22s linear infinite !important;
+    -webkit-animation:   scrollLogos 22s linear infinite !important;
+  }
+
+  /* ── Re-declare keyframes inside mobile scope ─────────────── */
+  @keyframes scrollLogos {
+    from { transform: translateX(0)    translateZ(0); }
+    to   { transform: translateX(-50%) translateZ(0); }
+  }
+  @-webkit-keyframes scrollLogos {
+    from { -webkit-transform: translateX(0)    translateZ(0); }
+    to   { -webkit-transform: translateX(-50%) translateZ(0); }
+  }
+
+}
+/* END ISSUE 2 CSS FIX */

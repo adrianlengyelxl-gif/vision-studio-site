@@ -1,21 +1,13 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FCQXVNLLR8"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-FCQXVNLLR8');
-  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Videógyártó Cég Budapest | Reklámfilm Készítés | Vision Studio</title>
-  <meta name="description" content="Vision Studio: prémium videógyártó cég Budapesten. Reklámfilm készítés, brand film, vállalati videógyártás. 1500+ videó, 12+ év tapasztalat. Hell Energy AI Commercial: 150M+ elérés, 4 platform.">
+  <title>Reklámfilm Készítés Budapest | Vision Studio</title>
+  <meta name="description" content="Vision Studio: prémium videógyártó cég Budapesten. Reklámfilm készítés, brand film, vállalati videógyártás. 1500+ videó, 12+ év tapasztalat. Hell.">
   <link rel="canonical" href="https://visionstudio.hu/">
   <link rel="alternate" hreflang="hu" href="https://visionstudio.hu/">
-  <link rel="alternate" hreflang="en" href="https://visionstudio.hu/video-production-budapest.html">
+  <link rel="alternate" hreflang="en" href="https://visionstudio.hu/video-production-budapest">
   <link rel="alternate" hreflang="x-default" href="https://visionstudio.hu/">
 
   <!-- Open Graph -->
@@ -23,7 +15,7 @@
   <meta property="og:description" content="Reklámfilmek, brand videók és marketing tartalom gyártása. 200+ projekt, 12+ év tapasztalat. Vision Studio Budapest.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://visionstudio.hu/">
-  <meta property="og:image" content="https://visionstudio.hu/assets/og-image.png">
+  <meta property="og:image" content="https://visionstudio.hu/assets/og/og-image.jpg">
   <meta property="og:locale" content="hu_HU">
   <meta property="og:site_name" content="Vision Studio Films Kft.">
 
@@ -31,7 +23,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Videógyártó Cég Budapest — Reklámfilm, Brand Film | Vision Studio">
   <meta name="twitter:description" content="Reklámfilmek, brand videók és marketing tartalom gyártása. 200+ projekt.">
-  <meta name="twitter:image" content="https://visionstudio.hu/assets/og-image.png">
+  <meta name="twitter:image" content="https://visionstudio.hu/assets/og/og-image.jpg">
 
   <!-- PWA / Theme -->
   <meta name="theme-color" content="#030303">
@@ -50,8 +42,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Syne:wght@400;600;700;800&family=Space+Mono&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/mobile-fixes.css">
+  <link rel="stylesheet" href="css/main.min.css">
+  <link rel="stylesheet" href="css/mobile-fixes.min.css">
 
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -74,7 +66,12 @@
       "https://www.instagram.com/visionstudiofilm/",
       "https://www.youtube.com/@visionstudioHU",
       "https://www.facebook.com/visionstudiohungary"
-    ]
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "47"
+    }
   }
   </script>
   <script type="application/ld+json">
@@ -92,7 +89,7 @@
     "alternateName": "Vision Studio Budapest",
     "url": "https://visionstudio.hu",
     "logo": "https://visionstudio.hu/assets/logos/vs-logo-full.webp",
-    "image": "https://visionstudio.hu/assets/og-image.png",
+    "image": "https://visionstudio.hu/assets/og/og-image.jpg",
     "telephone": "+36303462267",
     "email": "hello@visionstudio.hu",
     "priceRange": "300000 HUF – 3500000 HUF",
@@ -179,6 +176,59 @@
 /* ── HERO TYPOGRAPHY FIX ── */
 .hero-h1{font-size:clamp(36px,5.5vw,72px)!important;line-height:1.08!important}
 .hero-sub{font-size:clamp(14px,1.5vw,17px)!important;line-height:1.8!important;color:rgba(255,255,255,.78)!important}
+
+/* ── HERO KPI STRIP (13 év, 1500+, etc.) ── */
+.hero-kpi-row{
+  display:flex;
+  align-items:center;
+  gap:clamp(14px,2.5vw,36px);
+  flex-wrap:wrap;
+  margin-top:clamp(28px,4vw,48px);
+  padding-top:clamp(20px,3vw,32px);
+  border-top:1px solid rgba(255,255,255,.08);
+}
+.hero-kpi-row .hero-kpi-item,
+.hero-kpi-row .hero-kpi-sep{
+  opacity:0;
+  transform:translateY(18px);
+}
+.hero-kpi-item{
+  display:flex;
+  flex-direction:column;
+  gap:3px;
+}
+.hero-kpi-n{
+  font-family:var(--ff-display);
+  font-size:clamp(20px,2.4vw,30px);
+  font-weight:300;
+  color:var(--c-white);
+  line-height:1;
+  letter-spacing:-.01em;
+}
+.hero-kpi-l{
+  font-family:var(--ff-mono);
+  font-size:9px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.42);
+}
+.hero-kpi-sep{
+  width:1px;
+  height:30px;
+  background:rgba(255,255,255,.12);
+  flex-shrink:0;
+}
+@media(max-width:600px){
+  .hero-kpi-sep{display:none}
+  .hero-kpi-row{gap:clamp(16px,5vw,28px);row-gap:14px}
+  .hero-kpi-n{font-size:clamp(18px,5vw,24px)}
+}
+body:not(.gsap-ready) .hero-kpi-row .hero-kpi-item,
+body:not(.gsap-ready) .hero-kpi-row .hero-kpi-sep{opacity:1!important;transform:none!important}
+@media(prefers-reduced-motion:reduce){
+  .hero-kpi-row .hero-kpi-item,
+  .hero-kpi-row .hero-kpi-sep{transition:none!important;opacity:1!important;transform:none!important}
+}
 
 /* ── SERVICES: prevent service titles wrapping onto two lines ── */
 .srv-card h3,
@@ -353,6 +403,28 @@ p, .sec-sub, .srv-desc, .about-body, .proc-step-d, .testi-text, .blog-excerpt {
       </a>
     </div>
     <p style="font-family:var(--ff-mono);font-size:11px;letter-spacing:.12em;color:rgba(255,255,255,.45);margin-top:18px;margin-bottom:0">Visszajelzünk 24 órán belül</p>
+
+    <div class="hero-kpi-row" aria-label="Főbb számok">
+      <div class="hero-kpi-item">
+        <span class="hero-kpi-n">13 év</span>
+        <span class="hero-kpi-l">tapasztalat</span>
+      </div>
+      <div class="hero-kpi-sep"></div>
+      <div class="hero-kpi-item">
+        <span class="hero-kpi-n">1 500+</span>
+        <span class="hero-kpi-l">videóprojekt</span>
+      </div>
+      <div class="hero-kpi-sep"></div>
+      <div class="hero-kpi-item">
+        <span class="hero-kpi-n">52 ország</span>
+        <span class="hero-kpi-l">terjesztési piac</span>
+      </div>
+      <div class="hero-kpi-sep"></div>
+      <div class="hero-kpi-item">
+        <span class="hero-kpi-n">150M+</span>
+        <span class="hero-kpi-l">elérés</span>
+      </div>
+    </div>
   </div>
 
   <div class="hero-stats" aria-label="Statisztikák">
@@ -468,6 +540,60 @@ p, .sec-sub, .srv-desc, .about-body, .proc-step-d, .testi-text, .blog-excerpt {
 <!-- ═══════════════════════════════
      FEATURED CASE STUDY
      ═══════════════════════════════ -->
+
+<!-- ── HOMEPAGE GYORS AJÁNLATKÉRÉS ───────────────────── -->
+<section id="homepage-form" style="background:var(--c-dark2);padding:60px var(--gutter);border-top:1px solid var(--c-grey1);border-bottom:1px solid var(--c-grey1)">
+  <div style="max-width:900px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start">
+    <div>
+      <div style="font-family:var(--ff-mono);font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--c-gold);margin-bottom:12px">— Ingyenes konzultáció</div>
+      <h2 style="font-family:var(--ff-display);font-size:clamp(26px,3vw,40px);font-weight:300;color:var(--c-white);line-height:1.2;margin-bottom:16px">Kérjen árajánlatot<br><em style="color:var(--c-gold)">24 órán belül válaszolunk.</em></h2>
+      <p style="font-size:14px;color:var(--c-mid);line-height:1.75;max-width:380px">Reklámfilm, brand film, hotel videó vagy céges videó — megmondjuk mi fog működni, és mennyibe kerül.</p>
+      <div style="display:flex;flex-direction:column;gap:12px;margin-top:24px">
+        <div style="display:flex;align-items:center;gap:12px;font-size:13px;color:var(--c-mid)"><span style="color:var(--c-gold);font-size:16px">✓</span> Kötelezettség nélküli konzultáció</div>
+        <div style="display:flex;align-items:center;gap:12px;font-size:13px;color:var(--c-mid)"><span style="color:var(--c-gold);font-size:16px">✓</span> 24 órán belüli válasz</div>
+        <div style="display:flex;align-items:center;gap:12px;font-size:13px;color:var(--c-mid)"><span style="color:var(--c-gold);font-size:16px">✓</span> Fixáras ajánlat a briefing után</div>
+      </div>
+    </div>
+    <div>
+      <form name="homepage-inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field-hp" action="/koszonom.html" style="display:flex;flex-direction:column;gap:13px">
+        <input type="hidden" name="form-name" value="homepage-inquiry">
+        <p style="display:none" aria-hidden="true"><label>Ne töltse ki: <input name="bot-field-hp" autocomplete="off" tabindex="-1"></label></p>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="hp-name">Név *</label>
+            <input class="form-input" type="text" id="hp-name" name="name" required placeholder="Kovács János">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="hp-email">Email *</label>
+            <input class="form-input" type="email" id="hp-email" name="email" required placeholder="janos@cegnev.hu">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="hp-service">Videó típusa</label>
+          <select class="form-select" id="hp-service" name="service">
+            <option value="">— Válasszon —</option>
+            <option value="reklamfilm">Reklámfilm / TV spot</option>
+            <option value="brand-film">Brand film</option>
+            <option value="hotel-video">Hotel / szálloda videó</option>
+            <option value="ceges-video">Céges / vállalati videó</option>
+            <option value="dron">Drón felvétel</option>
+            <option value="social-media">Social media tartalom</option>
+            <option value="egyeb">Egyéb</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="hp-message">Projekt leírása *</label>
+          <textarea class="form-textarea" id="hp-message" name="message" required placeholder="Mit szeretne elérni? Mikor kellene elkészülnie? Van-e büdzsé keret?" style="min-height:80px"></textarea>
+        </div>
+        <button type="submit" class="btn-gold" style="width:100%;justify-content:center;padding:16px">
+          <span>Ajánlatkérés küldése →</span>
+        </button>
+        <p style="font-family:var(--ff-mono);font-size:10px;color:rgba(255,255,255,.3);text-align:center;margin:0">Vagy hívjon: <a href="tel:+36303462267" style="color:var(--c-gold)">+36 30 346 22 67</a></p>
+      </form>
+    </div>
+  </div>
+</section>
+
 <section class="featured-case" id="featured-case" aria-labelledby="featured-case-heading">
   <!-- Cinematic background layers -->
   <div class="fc-bg" aria-hidden="true">
@@ -1132,8 +1258,8 @@ p, .sec-sub, .srv-desc, .about-body, .proc-step-d, .testi-text, .blog-excerpt {
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 <script defer src="data/projects.js"></script>
-<script defer src="js/main.js"></script>
-<script defer src="js/performance.js"></script>
+<script defer src="js/main.min.js"></script>
+<script defer src="js/performance.min.js"></script>
 <script>
 /* ═══════════════════════════════════════════════════════════════
    HORIZONTAL FILMSTRIP ENGINE
@@ -1384,5 +1510,34 @@ p, .sec-sub, .srv-desc, .about-body, .proc-step-d, .testi-text, .blog-excerpt {
 
   window.addEventListener('load', run);
 }());
+</script>
+<script>
+/* Hero KPI strip animation trigger */
+(function(){
+  function triggerKpi(){
+    var el = document.querySelector('.hero-kpi-row');
+    if(!el) return;
+    // stagger each item individually
+    var items = el.querySelectorAll('.hero-kpi-item, .hero-kpi-sep');
+    el.style.transition = 'none';
+    el.style.opacity = '1';
+    el.style.transform = 'none';
+    items.forEach(function(item, i){
+      item.style.opacity = '0';
+      item.style.transform = 'translateY(18px)';
+      item.style.transition = 'opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1)';
+      item.style.transitionDelay = (i * 90) + 'ms';
+      setTimeout(function(){
+        item.style.opacity = '1';
+        item.style.transform = 'translateY(0)';
+      }, 20);
+    });
+  }
+  var noLoader = document.body.classList.contains('no-loader');
+  var delay = noLoader ? 500 : 2600;
+  if(window._kpiTriggered) return;
+  window._kpiTriggered = true;
+  setTimeout(triggerKpi, delay);
+})();
 </script>
 </body></html>
